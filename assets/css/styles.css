@@ -152,9 +152,7 @@ header .btn:first-child {
 /* Introduce */
 
 .section-intro {
-    /* margin-top: 200px; */
     background: #fff;
-    height: 1000px;
     padding: 200px 0;
 }
 
@@ -164,7 +162,7 @@ header .btn:first-child {
     font-size: 3.8rem;
     font-weight: 700;
     letter-spacing: -0.76px;
-    margin-bottom: 35px;
+    margin-bottom: 65px;
 }
 
 .intro .intro-1 .row {
@@ -219,11 +217,102 @@ header .btn:first-child {
 }
 
 .intro .row-1 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-left: 20px;
 }
 
 .intro .row-2 {
     display: flex;
     flex-direction: row-reverse;
+}
+
+/* =========  resources ======= */
+.section-resources {
+    padding: 96px 0;
+    height: 2000px;
+    background: #fffcf4;
+}
+
+.section-resources .title {
+    color: #130606;
+    text-align: center;
+    font-family: Sen;
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.76px;
+}
+
+.section-resources .row .desc {
+    width: 448px;
+    margin: 16px auto;
+    text-align: center;
+    color: #696262;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-bottom: 75px;
+}
+
+.resources-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    justify-content: center;
+}
+
+.resource {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid transparent;
+    box-shadow: 10px 10px 25px 1px rgb(181, 184, 222, 0.6);
+}
+
+.resource:hover {
+    border: 3px solid #ffb900;
+}
+
+.resource .image {
+    width: 35%;
+    margin-right: 20px;
+}
+
+.resource .image i {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background: #74c0fc61;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.resource .resource-title {
+    color: #130606;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.resource .desc {
+    margin-bottom: 12px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.resource .link-cta {
+    margin-bottom: 12px;
+    color: orange;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.7px;
 }
