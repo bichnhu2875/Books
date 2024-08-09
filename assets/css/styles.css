@@ -17,8 +17,7 @@ body {
 }
 
 .content {
-    width: 1000px;
-    max-width: calc(100% - 48px);
+    max-width: calc(90% - 200px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -37,8 +36,13 @@ body {
 
 /* ====== Header ======  */
 header {
+    position: sticky;
+    top: -4px;
+    left: 0;
+    z-index: 1;
     padding: 2px 0;
     background: #fffcf4;
+    border-bottom: 1px solid #ccc;
 }
 
 header .content {
@@ -46,6 +50,7 @@ header .content {
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
+    width: 100%;
 }
 
 header .logo-inf {
@@ -57,17 +62,65 @@ header .logo {
     width: 80px;
     height: 80px;
     object-fit: contain;
+    margin-right: 20px;
 }
 
 header .desc {
     color: #171100;
-    font-size: 1.3rem;
-    font-weight: 700;
-    /* text-shadow: 2px 2px 2px rgba(255, 185, 0, 0.6); */
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
-header .btn:first-child {
-    margin-right: 4px;
+header .button a:first-child {
+    min-width: 140px;
+    color: #000;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+/*============= Navigation ================*/
+
+nav {
+    min-width: 10%;
+    position: sticky;
+    left: 0;
+    top: 94px;
+}
+
+nav .items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .item .link {
+    min-width: 80px;
+    margin-top: 12px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 18px;
+}
+
+nav .item .link:hover {
+    background: #ecd0a4;
+}
+
+nav .items .icon {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+nav .items .subtitle {
+    font-size: 1.3rem;
+    color: #5f5b53;
+    font-weight: 400;
 }
 
 /* ======= Hero ====== */
@@ -153,7 +206,7 @@ header .btn:first-child {
 
 .section-intro {
     background: #fff;
-    padding: 200px 0;
+    padding: 140px 0;
 }
 
 .intro .title {
@@ -229,7 +282,6 @@ header .btn:first-child {
 /* =========  resources ======= */
 .section-resources {
     padding: 96px 0;
-    height: 2000px;
     background: #fffcf4;
 }
 
@@ -315,4 +367,65 @@ header .btn:first-child {
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0.7px;
+}
+
+/* ============= footer ============= */
+
+footer {
+    position: sticky;
+    top: 0;
+    background: #2e2100;
+}
+
+footer .content {
+    height: 428px;
+}
+
+footer .inf {
+    padding: 96px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+footer .inf-links {
+    display: flex;
+    gap: 100px;
+}
+
+footer .logo {
+    color: #f8861a;
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+footer .inf .desc {
+    width: 267px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 18px;
+}
+
+footer .inf-link .title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+footer .links {
+    margin-top: 43px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .inf-link .link,
+footer .inf-link a {
+    min-width: 82px;
+    margin-top: 12px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
