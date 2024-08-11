@@ -25,9 +25,11 @@
             href="./assets/image/Books.logo.png"
             type="image/x-icon"
         />
+        <!-- Script -->
+        <script src="./js/script.js"></script>
         <title>Books. - Cộng đồng đọc sách</title>
     </head>
-    <body>
+    <body id="idBody">
         <!-- header -->
         <header>
             <div class="content">
@@ -41,8 +43,21 @@
                 </div>
 
                 <div class="button">
-                    <a href="#!"> Đăng ký </a>
-                    <a href="#!" class="btn">Đăng nhập</a>
+                    <a
+                        href="#regId"
+                        id="idRegister"
+                        onclick="changeDisplayRegister()"
+                    >
+                        Đăng ký
+                    </a>
+                    <a
+                        href="#loginId"
+                        id="idLogin"
+                        class="btn"
+                        onclick="changeDisplayLogin()"
+                    >
+                        Đăng nhập
+                    </a>
                 </div>
             </div>
         </header>
@@ -52,29 +67,32 @@
             <ul class="items">
                 <li class="item">
                     <a href="#" class="link"
-                        ><i
-                            class="fa-solid fa-house icon"
-                            style="color: #403407"
-                        ></i>
+                        ><i class="fa-solid fa-house icon"></i>
                         <span class="subtitle">Trang chủ</span>
                     </a>
                 </li>
                 <li class="item">
                     <a href="#idIntro" class="link"
-                        ><i
-                            class="fa-solid fa-circle-info icon"
-                            style="color: #403407"
-                        ></i>
+                        ><i class="fa-solid fa-circle-info icon"></i>
                         <span class="subtitle">Giới thiệu</span>
                     </a>
                 </li>
                 <li class="item">
                     <a href="#idResource" class="link"
-                        ><i
-                            class="fa-solid fa-database icon"
-                            style="color: #403407"
-                        ></i>
+                        ><i class="fa-solid fa-database icon"></i>
                         <span class="subtitle">Tài nguyên</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#idResource" class="link">
+                        <i class="fa-solid fa-book icon"></i>
+                        <span class="subtitle">Thư viện</span>
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#idResource" class="link"
+                        ><i class="fa-solid fa-newspaper icon"></i>
+                        <span class="subtitle">Tin tức</span>
                     </a>
                 </li>
             </ul>
@@ -274,7 +292,63 @@
                     </div>
                 </div>
             </section>
-
+            <!-- Login -->
+            <section class="login" style="display: none" id="loginId">
+                <div class="content">
+                    <form action="#!">
+                        <h2 class="title">Đăng nhập</h2>
+                        <div class="input-group">
+                            <input type="text" required />
+                            <label for="">Username</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required />
+                            <label for="">Password</label>
+                        </div>
+                        <input type="submit" class="btn" value="Đăng nhập" />
+                        <div class="extra-inf">
+                            <p class="desc">Nếu bạn chưa có tài khoản?</p>
+                            <a
+                                href="#regId"
+                                class="link-cta"
+                                onclick="changeDisplayRegister()"
+                                >Đăng ký ngay</a
+                            >
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- Register account -->
+            <section class="register login" id="regId">
+                <div class="content">
+                    <form action="#!">
+                        <h2 class="title">Đăng kí</h2>
+                        <div class="input-group">
+                            <input type="email" required />
+                            <label for="">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required />
+                            <label for="">Password</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" required />
+                            <label for="">Confirm Password</label>
+                        </div>
+                        <input type="submit" class="btn" value="Đăng ký" />
+                        <div class="extra-inf">
+                            <p class="desc">Nếu bạn đã có tài khoản?</p>
+                            <a
+                                href="#loginId"
+                                class="link-cta"
+                                onclick="changeDisplayLogin()"
+                                >Đăng nhập ngay</a
+                            >
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- footer -->
             <footer>
                 <div class="content">
                     <div class="inf">

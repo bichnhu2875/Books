@@ -17,7 +17,7 @@ body {
 }
 
 .content {
-    max-width: calc(90% - 200px);
+    max-width: calc(90% - 150px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -99,7 +99,7 @@ nav .items {
 
 nav .item .link {
     min-width: 80px;
-    margin-top: 12px;
+    margin-top: 4px;
     padding: 20px 12px;
     display: flex;
     flex-direction: column;
@@ -115,6 +115,8 @@ nav .item .link:hover {
 nav .items .icon {
     font-size: 2.2rem;
     margin-bottom: 8px;
+    color: #000;
+    /* <i class="fa-solid fa-newspaper" style="color: #d3c688;"></i>*/
 }
 
 nav .items .subtitle {
@@ -369,20 +371,102 @@ nav .items .subtitle {
     letter-spacing: 0.7px;
 }
 
+/* =============== Log in =============== */
+/* =============== Register ============= */
+
+section.login {
+    padding: 150px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/* section.register {
+    display: none;
+} */
+
+section.login .content {
+    box-shadow: -5px -2px 65px 0px rgba(242, 142, 21, 0.75);
+    padding: 50px 30px;
+    border-radius: 20px;
+    min-width: 420px;
+}
+
+section.login .title {
+    margin-bottom: 50px;
+    color: #171100;
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: -0.76px;
+    text-shadow: 4px 4px 8px rgba(225, 106, 60, 0.52);
+}
+
+.input-group {
+    margin: 20px 0;
+    position: relative;
+}
+
+.input-group label {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 15px;
+    pointer-events: none;
+    padding: 0 5px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+}
+
+.input-group input {
+    width: 100%;
+    height: 60px;
+    font-size: 1.6rem;
+    padding: 0 15px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: 0;
+    background: #fff;
+    font-size: 1.4rem;
+    padding: 0 7px;
+    border-radius: 8px;
+}
+
+.login .extra-inf {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login .extra-inf .desc {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.login .extra-inf .link-cta {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
 /* ============= footer ============= */
 
 footer {
     position: sticky;
     top: 0;
     background: #2e2100;
-}
-
-footer .content {
-    height: 428px;
+    padding: 50px 0;
 }
 
 footer .inf {
-    padding: 96px 0;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
