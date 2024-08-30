@@ -13,6 +13,10 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
         <!-- Font Awesome -->
         <link
             rel="stylesheet"
@@ -48,932 +52,1117 @@
                 </div>
             </div>
         </header>
-
-        <!-- navigation -->
-        <nav class="navigation">
-            <ul class="items public-items">
-                <li class="item">
-                    <a href="#" class="link"
-                        ><i class="fa-solid fa-house icon"></i>
-                        <span class="subtitle">Trang chủ</span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#idIntro" class="link"
-                        ><i class="fa-solid fa-circle-info icon"></i>
-                        <span class="subtitle">Giới thiệu</span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#idResource" class="link"
-                        ><i class="fa-solid fa-database icon"></i>
-                        <span class="subtitle">Tài nguyên</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="items private-items" id="linkId">
-                <li class="item">
-                    <a href="#libraryId" class="link">
-                        <i class="fa-solid fa-book icon"></i>
-                        <span class="subtitle">Thư viện</span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#idResource" class="link"
-                        ><i class="fa-solid fa-newspaper icon"></i>
-                        <span class="subtitle">Tin tức</span>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#idResource" class="link"
-                        ><i class="fa-solid fa-users icon"></i>
-                        <span class="subtitle">Nhóm thảo luận</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <!-- hero -->
-            <section class="section-hero">
-                <div class="content">
-                    <div class="hero">
-                        <div class="image">
-                            <img
-                                src="./assets/image/hero-book.png"
-                                alt=""
-                                class="image-book"
+        <main class="big">
+            <!-- navigation -->
+            <nav class="navigation">
+                <ul class="items public-items">
+                    <li class="item">
+                        <a href="#" class="link"
+                            ><i class="fa-solid fa-house icon"></i>
+                            <span class="subtitle">Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#idIntro" class="link"
+                            ><i class="fa-solid fa-circle-info icon"></i>
+                            <span class="subtitle">Giới thiệu</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#idResource" class="link"
+                            ><i class="fa-solid fa-database icon"></i>
+                            <span class="subtitle">Tài nguyên</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="items private-items" id="linkId">
+                    <li class="item">
+                        <a href="#libraryId" class="link">
+                            <i class="fa-solid fa-book icon"></i>
+                            <span class="subtitle">Thư viện</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#newsId" class="link"
+                            ><i class="fa-solid fa-newspaper icon"></i>
+                            <span class="subtitle">Tin tức</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#idResource" class="link"
+                            ><i class="fa-solid fa-users icon"></i>
+                            <span class="subtitle">Nhóm thảo luận</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="section-content">
+                <!-- hero -->
+                <section class="section-hero">
+                    <div class="content">
+                        <div class="hero">
+                            <div class="image">
+                                <img
+                                    src="./assets/image/hero-book.png"
+                                    alt=""
+                                    class="image-book"
+                                />
+                                <!-- <img src="" alt="" /> -->
+                            </div>
+                            <div class="info">
+                                <h1 class="title">
+                                    Chào mừng đến với cộng đồng sách.
+                                </h1>
+                                <p class="desc">
+                                    Khám phá những cuốn sách hay nhất, kết nối
+                                    với những người đam mê sách, chia sẻ nhận
+                                    xét của bạn với cộng đồng.
+                                </p>
+                                <div class="button-link">
+                                    <a href="#!" class="btn">Tìm hiểu thêm</a>
+                                </div>
+                                <p class="desc desc-stats">
+                                    Hiện tại, đã có hơn:
+                                </p>
+                                <div class="stats">
+                                    <div class="stat">
+                                        <span class="stat-nmb"> 20+ </span>
+                                        <span class="desc">Thể loại sách.</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-nmb"> 200K+ </span>
+                                        <span class="desc">Lượt xem.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- introduce -->
+                <section class="section-intro" id="idIntro">
+                    <div class="content">
+                        <div class="intro">
+                            <h2 class="title">Giới thiệu</h2>
+                            <div class="intro-1">
+                                <div class="row row-1">
+                                    <img
+                                        src="./assets/image/purpose.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                    <div class="inf">
+                                        <h3 class="sub-title" id="idIntro-1">
+                                            Sứ mệnh
+                                        </h3>
+                                        <p class="desc">
+                                            Là tấm gương phản chiếu chân dung
+                                            của một độc giả thời hiện đại, đồng
+                                            thời là khoảnh sân vườn để những
+                                            người thích viết gieo trồng những
+                                            suy nghĩ, trăn trở trong nội tâm
+                                            mình
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row row-2">
+                                    <img
+                                        src="./assets/image/purpose-2.png"
+                                        alt=""
+                                        class="image"
+                                    />
+                                    <div class="inf">
+                                        <h3 class="sub-title" id="idIntro-2">
+                                            Mục đích
+                                        </h3>
+                                        <p class="desc">
+                                            Website mạng xã hội sách của chúng
+                                            tôi được tạo ra để kết nối những
+                                            người yêu sách từ khắp nơi trên thế
+                                            giới. Chúng tôi cung cấp một nền
+                                            tảng nơi mọi người có thể chia sẻ,
+                                            khám phá và thảo luận về những cuốn
+                                            sách yêu thích của mình.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- resources -->
+                <section class="section-resources" id="idResource">
+                    <div class="content">
+                        <div class="row">
+                            <h2 class="title">Tài nguyên</h2>
+                            <p class="desc">
+                                Các tài nguyên dưới đây hỗ trợ cho những người
+                                yêu thích sách có một nơi lý tưởng để tự do thể
+                                hiện ý tưởng, là nơi gặp gỡ của những người yêu
+                                sách.
+                            </p>
+                        </div>
+                        <div class="resources-box">
+                            <div class="resource">
+                                <div class="image">
+                                    <i
+                                        class="fa-solid fa-book"
+                                        style="color: #200b28"
+                                    ></i>
+                                </div>
+                                <div class="info">
+                                    <h3 class="resource-title">
+                                        Thư viện sách
+                                    </h3>
+                                    <p class="desc">
+                                        Thư viện sách đa dạng với hàng ngàn tựa
+                                        sách từ nhiều thể loại khác nhau, từ
+                                        tiểu thuyết, phi hư cấu, sách chuyên
+                                        ngành, đến các tác phẩm văn học kinh
+                                        điển.
+                                    </p>
+                                    <a href="#!" class="link-cta"
+                                        >Tìm hiểu thêm</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="resource">
+                                <div class="image">
+                                    <i
+                                        class="fa-brands fa-searchengin"
+                                        style="color: #1f0d54"
+                                    ></i>
+                                </div>
+                                <div class="info">
+                                    <h3 class="resource-title">
+                                        Tìm kiếm nhanh
+                                    </h3>
+                                    <p class="desc">
+                                        Công cụ tìm kiếm mạnh mẽ giúp người dùng
+                                        nhanh chóng tìm thấy sách mà họ quan tâm
+                                        theo tên, tác giả, hoặc thể loại.
+                                    </p>
+                                    <a href="#!" class="link-cta"
+                                        >Tìm hiểu thêm</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="resource">
+                                <div class="image">
+                                    <i
+                                        class="fa-regular fa-newspaper"
+                                        style="color: #22775d"
+                                    ></i>
+                                </div>
+                                <div class="info">
+                                    <h3 class="resource-title">
+                                        Tin tức và cập nhật
+                                    </h3>
+                                    <p class="desc">
+                                        Cập nhật những tin tức mới nhất về thế
+                                        giới sách, từ các sự kiện ra mắt sách
+                                        đến các tin tức về tác giả.
+                                    </p>
+                                    <a href="#!" class="link-cta"
+                                        >Tham gia ngay</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="resource">
+                                <div class="image">
+                                    <i
+                                        class="fa-regular fa-comment"
+                                        style="color: #360c25"
+                                    ></i>
+                                </div>
+                                <div class="info">
+                                    <h3 class="resource-title">
+                                        Đánh giá và nhận xét
+                                    </h3>
+                                    <p class="desc">
+                                        Người dùng có thể tham gia cộng đồng
+                                        nhận xét, nơi họ có thể viết và chia sẻ
+                                        suy nghĩ về những cuốn sách đã đọc.
+                                    </p>
+                                    <a href="#!" class="link-cta"
+                                        >Tham gia ngay</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="resource">
+                                <div class="image">
+                                    <i
+                                        class="fa-solid fa-user-group"
+                                        style="color: #082622"
+                                    ></i>
+                                </div>
+                                <div class="info">
+                                    <h3 class="resource-title">
+                                        Nhóm thảo luận
+                                    </h3>
+                                    <p class="desc">
+                                        Tham gia vào các nhóm thảo luận, nơi
+                                        người dùng có thể trao đổi về các chủ đề
+                                        liên quan đến sách, từ phân tích văn học
+                                        đến việc chia sẻ các nguồn tài liệu học
+                                        thuật.
+                                    </p>
+                                    <a href="#!" class="link-cta"
+                                        >Tham gia ngay</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Login -->
+                <section class="login" id="loginId">
+                    <div class="content">
+                        <form action="#!">
+                            <h2 class="title">Đăng nhập</h2>
+                            <div class="input-group">
+                                <input type="text" required />
+                                <label for="">Username</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" required />
+                                <label for="">Password</label>
+                            </div>
+                            <input
+                                href="#linkId"
+                                type="submit"
+                                class="btn"
+                                value="Đăng nhập"
                             />
-                            <!-- <img src="" alt="" /> -->
-                        </div>
-                        <div class="info">
-                            <h1 class="title">
-                                Chào mừng đến với cộng đồng sách.
-                            </h1>
+                            <div class="extra-inf">
+                                <p class="desc">Nếu bạn chưa có tài khoản?</p>
+                                <a href="#regId" class="link-cta"
+                                    >Đăng ký ngay</a
+                                >
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- Register account -->
+                <section class="register login" id="regId">
+                    <div class="content">
+                        <form action="#!">
+                            <h2 class="title">Đăng kí</h2>
+                            <div class="input-group">
+                                <input type="email" required />
+                                <label for="">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" required />
+                                <label for="">Password</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" required />
+                                <label for="">Confirm Password</label>
+                            </div>
+                            <input
+                                href="#linkId"
+                                type="submit"
+                                class="btn"
+                                value="Đăng ký"
+                            />
+                            <div class="extra-inf">
+                                <p class="desc">Nếu bạn đã có tài khoản?</p>
+                                <a href="#loginId" class="link-cta"
+                                    >Đăng nhập ngay</a
+                                >
+                            </div>
+                        </form>
+                    </div>
+                </section>
+                <!-- Library -->
+                <section class="library" id="libraryId">
+                    <div class="content">
+                        <div class="subject">
+                            <h2 class="subject-title">Thư viện</h2>
                             <p class="desc">
-                                Khám phá những cuốn sách hay nhất, kết nối với
-                                những người đam mê sách, chia sẻ nhận xét của
-                                bạn với cộng đồng.
-                            </p>
-                            <div class="button-link">
-                                <a href="#!" class="btn">Tìm hiểu thêm</a>
-                            </div>
-                            <p class="desc desc-stats">Hiện tại, đã có hơn:</p>
-                            <div class="stats">
-                                <div class="stat">
-                                    <span class="stat-nmb"> 20+ </span>
-                                    <span class="desc">Thể loại sách.</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-nmb"> 200K+ </span>
-                                    <span class="desc">Lượt xem.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- introduce -->
-            <section class="section-intro" id="idIntro">
-                <div class="content">
-                    <div class="intro">
-                        <h2 class="title">Giới thiệu</h2>
-                        <div class="intro-1">
-                            <div class="row row-1">
-                                <img
-                                    src="./assets/image/purpose.png"
-                                    alt=""
-                                    class="image"
-                                />
-                                <div class="inf">
-                                    <h3 class="sub-title" id="idIntro-1">
-                                        Sứ mệnh
-                                    </h3>
-                                    <p class="desc">
-                                        Là tấm gương phản chiếu chân dung của
-                                        một độc giả thời hiện đại, đồng thời là
-                                        khoảnh sân vườn để những người thích
-                                        viết gieo trồng những suy nghĩ, trăn trở
-                                        trong nội tâm mình
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row row-2">
-                                <img
-                                    src="./assets/image/purpose-2.png"
-                                    alt=""
-                                    class="image"
-                                />
-                                <div class="inf">
-                                    <h3 class="sub-title" id="idIntro-2">
-                                        Mục đích
-                                    </h3>
-                                    <p class="desc">
-                                        Website mạng xã hội sách của chúng tôi
-                                        được tạo ra để kết nối những người yêu
-                                        sách từ khắp nơi trên thế giới. Chúng
-                                        tôi cung cấp một nền tảng nơi mọi người
-                                        có thể chia sẻ, khám phá và thảo luận về
-                                        những cuốn sách yêu thích của mình.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- resources -->
-            <section class="section-resources" id="idResource">
-                <div class="content">
-                    <div class="row">
-                        <h2 class="title">Tài nguyên</h2>
-                        <p class="desc">
-                            Các tài nguyên dưới đây hỗ trợ cho những người yêu
-                            thích sách có một nơi lý tưởng để tự do thể hiện ý
-                            tưởng, là nơi gặp gỡ của những người yêu sách.
-                        </p>
-                    </div>
-                    <div class="resources-box">
-                        <div class="resource">
-                            <div class="image">
-                                <i
-                                    class="fa-solid fa-book"
-                                    style="color: #200b28"
-                                ></i>
-                            </div>
-                            <div class="info">
-                                <h3 class="resource-title">Thư viện sách</h3>
-                                <p class="desc">
-                                    Thư viện sách đa dạng với hàng ngàn tựa sách
-                                    từ nhiều thể loại khác nhau, từ tiểu thuyết,
-                                    phi hư cấu, sách chuyên ngành, đến các tác
-                                    phẩm văn học kinh điển.
-                                </p>
-                                <a href="#!" class="link-cta">Tìm hiểu thêm</a>
-                            </div>
-                        </div>
-                        <div class="resource">
-                            <div class="image">
-                                <i
-                                    class="fa-brands fa-searchengin"
-                                    style="color: #1f0d54"
-                                ></i>
-                            </div>
-                            <div class="info">
-                                <h3 class="resource-title">Tìm kiếm nhanh</h3>
-                                <p class="desc">
-                                    Công cụ tìm kiếm mạnh mẽ giúp người dùng
-                                    nhanh chóng tìm thấy sách mà họ quan tâm
-                                    theo tên, tác giả, hoặc thể loại.
-                                </p>
-                                <a href="#!" class="link-cta">Tìm hiểu thêm</a>
-                            </div>
-                        </div>
-                        <div class="resource">
-                            <div class="image">
-                                <i
-                                    class="fa-regular fa-newspaper"
-                                    style="color: #22775d"
-                                ></i>
-                            </div>
-                            <div class="info">
-                                <h3 class="resource-title">
-                                    Tin tức và cập nhật
-                                </h3>
-                                <p class="desc">
-                                    Cập nhật những tin tức mới nhất về thế giới
-                                    sách, từ các sự kiện ra mắt sách đến các tin
-                                    tức về tác giả.
-                                </p>
-                                <a href="#!" class="link-cta">Tham gia ngay</a>
-                            </div>
-                        </div>
-                        <div class="resource">
-                            <div class="image">
-                                <i
-                                    class="fa-regular fa-comment"
-                                    style="color: #360c25"
-                                ></i>
-                            </div>
-                            <div class="info">
-                                <h3 class="resource-title">
-                                    Đánh giá và nhận xét
-                                </h3>
-                                <p class="desc">
-                                    Người dùng có thể tham gia cộng đồng nhận
-                                    xét, nơi họ có thể viết và chia sẻ suy nghĩ
-                                    về những cuốn sách đã đọc.
-                                </p>
-                                <a href="#!" class="link-cta">Tham gia ngay</a>
-                            </div>
-                        </div>
-                        <div class="resource">
-                            <div class="image">
-                                <i
-                                    class="fa-solid fa-user-group"
-                                    style="color: #082622"
-                                ></i>
-                            </div>
-                            <div class="info">
-                                <h3 class="resource-title">Nhóm thảo luận</h3>
-                                <p class="desc">
-                                    Tham gia vào các nhóm thảo luận, nơi người
-                                    dùng có thể trao đổi về các chủ đề liên quan
-                                    đến sách, từ phân tích văn học đến việc chia
-                                    sẻ các nguồn tài liệu học thuật.
-                                </p>
-                                <a href="#!" class="link-cta">Tham gia ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Login -->
-            <section class="login" id="loginId">
-                <div class="content">
-                    <form action="#!">
-                        <h2 class="title">Đăng nhập</h2>
-                        <div class="input-group">
-                            <input type="text" required />
-                            <label for="">Username</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" required />
-                            <label for="">Password</label>
-                        </div>
-                        <input
-                            href="#linkId"
-                            type="submit"
-                            class="btn"
-                            value="Đăng nhập"
-                        />
-                        <div class="extra-inf">
-                            <p class="desc">Nếu bạn chưa có tài khoản?</p>
-                            <a href="#regId" class="link-cta">Đăng ký ngay</a>
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <!-- Register account -->
-            <section class="register login" id="regId">
-                <div class="content">
-                    <form action="#!">
-                        <h2 class="title">Đăng kí</h2>
-                        <div class="input-group">
-                            <input type="email" required />
-                            <label for="">Email</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" required />
-                            <label for="">Password</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="password" required />
-                            <label for="">Confirm Password</label>
-                        </div>
-                        <input
-                            href="#linkId"
-                            type="submit"
-                            class="btn"
-                            value="Đăng ký"
-                        />
-                        <div class="extra-inf">
-                            <p class="desc">Nếu bạn đã có tài khoản?</p>
-                            <a href="#loginId" class="link-cta"
-                                >Đăng nhập ngay</a
-                            >
-                        </div>
-                    </form>
-                </div>
-            </section>
-            <!-- Library -->
-            <section class="library" id="libraryId">
-                <div class="content">
-                    <div class="subject">
-                        <h2 class="subject-title">Thư viện</h2>
-                        <p class="desc">
-                            Khám phá thư viện sách trực tuyến với hàng ngàn tựa
-                            sách đa dạng. Chỉ cần một cú nhấp, bạn có thể đọc
-                            ngay và kết nối với cộng đồng yêu sách!
-                        </p>
-                    </div>
-                    <div class="search">
-                        <p class="option-desc">Bạn muốn tìm kiếm theo:</p>
-                        <div class="options">
-                            <a href="#!" class="option-btn">Thể loại</a>
-                            <a href="#!" class="option-btn">Tên sách</a>
-                            <a href="#!" class="option-btn">Tác giả</a>
-                        </div>
-                    </div>
-                    <div class="text-options">
-                        <input
-                            type="text"
-                            placeholder="Nhập thể loại bạn muốn tìm"
-                            class="text-option"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Nhập tên sách bạn muốn tìm"
-                            class="text-option"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Nhập tên tác giả bạn muốn tìm"
-                            class="text-option"
-                        />
-                    </div>
-                    <div class="type">
-                        <h4 class="title">Sách được quan tâm</h4>
-
-                        <div class="detail">
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book1.webp"
-                                        alt="The Future Is Immersive"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            The Future Is Immersive
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        Tác giả: Yuval Noah Harari
-                                    </p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book2.webp"
-                                        alt="The Future Is Immersive"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            The Future Is Immersive
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        Tác giả: Haruki Murakami , Trịnh Lữ
-                                    </p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book3.webp"
-                                        alt="The Future Is Immersive"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Thư Viện Nửa Đêm
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Matt Haig</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book4.webp"
-                                        alt="Sao chúng ta lại ngủ"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Sao chúng ta lại ngủ
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Matthew Walker</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book5.webp"
-                                        alt="Người Đàn Ông Mang Tên Ove"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Người Đàn Ông Mang Tên Ove
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Fredrik Backman</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/book6.webp"
-                                        alt="Con Chim Xanh Biếc Bay Về"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Con Chim Xanh Biếc Bay Về
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Nguyễn Nhật Ánh</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="type">
-                        <h4 class="title">Sách mới</h4>
-                        <div class="detail">
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/newbook1.webp"
-                                        alt="East Wind West Wind"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            East Wind West Wind
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Pearl S. Buck</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/newbook2.webp"
-                                        alt="Điểm Danh Đồng Đội"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Điểm Danh Đồng Đội
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Phạm Sĩ Sáu</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/newbook3.webp"
-                                        alt="Kế Toán Vỉa Hè"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Kế Toán Vỉa Hè
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Darrell Mullis</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/newbook4.webp"
-                                        alt="Giờ Thứ 25"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">Giờ Thứ 25</h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: C. V. Gheorghiu</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="type">
-                        <h4 class="title">Sách tuổi học trò</h4>
-                        <div class="detail">
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/studentbook1.webp"
-                                        alt="Thằng Côn"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">Thằng Côn</h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Duyên Anh</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/studentbook2.webp"
-                                        alt="Xin Lỗi Mày, Tai To"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Xin Lỗi Mày, Tai To
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Nguyễn Nhật Ánh</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/studentbook3.webp"
-                                        alt="Xanh như mây trời"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">
-                                            Xanh như mây trời
-                                        </h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">Tác giả: Darrell Mullis</p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="images">
-                                    <img
-                                        src="./assets/image/studentbook4.webp"
-                                        alt="Hoàng tử bé"
-                                        class="image"
-                                    />
-                                </div>
-                                <div class="info">
-                                    <div class="row">
-                                        <h5 class="sub-title">Hoàng tử bé</h5>
-                                        <div class="star-block">
-                                            <img
-                                                src="./assets/image/Star.svg"
-                                                alt=""
-                                                class="star"
-                                            />
-                                            <span class="stat">4.5</span>
-                                        </div>
-                                    </div>
-                                    <p class="desc">
-                                        Tác giả: Antoine De Saint Exupéry
-                                    </p>
-                                    <div class="row row-2">
-                                        <a href="#!" class="icon"
-                                            ><i
-                                                class="fa-regular fa-thumbs-up like-btn"
-                                            ></i>
-                                            <span class="icon-inf">Thích</span>
-                                        </a>
-
-                                        <a href="#!" class="link-cta"
-                                            >Tải sách về</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- footer -->
-            <footer>
-                <div class="content">
-                    <div class="inf">
-                        <div class="inf-desc">
-                            <h1><a href="#" class="logo">Books.</a></h1>
-                            <p class="desc">
-                                Chúng tôi luôn cố gắng để tạo ra một cộng đồng
-                                lành mạnh dành cho những người yêu sách. Mong
-                                được sự hỗ trợ, góp ý từ các bạn để cộng đồng
-                                Books. được trở nên lớn mạnh hơn.
+                                Khám phá thư viện sách trực tuyến với hàng ngàn
+                                tựa sách đa dạng. Chỉ cần một cú nhấp, bạn có
+                                thể đọc ngay và kết nối với cộng đồng yêu sách!
                             </p>
                         </div>
-                        <div class="inf-links">
-                            <div class="inf-link">
-                                <h4 class="title">Về Books</h4>
-                                <div class="links">
-                                    <a href="#idIntro-1" class="link"
-                                        >Sứ mệnh</a
-                                    >
-                                    <a href="#idIntro-2" class="link"
-                                        >Mục đích</a
-                                    >
-                                    <a href="#idResource" class="link"
-                                        >Tài nguyên</a
-                                    >
+                        <div class="search">
+                            <p class="option-desc">Bạn muốn tìm kiếm theo:</p>
+                            <div class="options">
+                                <a href="#!" class="option-btn">Thể loại</a>
+                                <a href="#!" class="option-btn">Tên sách</a>
+                                <a href="#!" class="option-btn">Tác giả</a>
+                            </div>
+                        </div>
+                        <div class="text-options">
+                            <input
+                                type="text"
+                                placeholder="Nhập thể loại bạn muốn tìm"
+                                class="text-option"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Nhập tên sách bạn muốn tìm"
+                                class="text-option"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Nhập tên tác giả bạn muốn tìm"
+                                class="text-option"
+                            />
+                        </div>
+                        <div class="type">
+                            <h4 class="title">Sách được quan tâm</h4>
+
+                            <div class="detail">
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book1.webp"
+                                            alt="The Future Is Immersive"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                The Future Is Immersive
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Yuval Noah Harari
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book2.webp"
+                                            alt="The Future Is Immersive"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                The Future Is Immersive
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Haruki Murakami , Trịnh Lữ
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book3.webp"
+                                            alt="The Future Is Immersive"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Thư Viện Nửa Đêm
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">Tác giả: Matt Haig</p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book4.webp"
+                                            alt="Sao chúng ta lại ngủ"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Sao chúng ta lại ngủ
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Matthew Walker
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book5.webp"
+                                            alt="Người Đàn Ông Mang Tên Ove"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Người Đàn Ông Mang Tên Ove
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Fredrik Backman
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/book6.webp"
+                                            alt="Con Chim Xanh Biếc Bay Về"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Con Chim Xanh Biếc Bay Về
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Nguyễn Nhật Ánh
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="inf-link">
-                                <h4 class="title">Tính năng</h4>
-                                <div class="links">
-                                    <a href="#!" class="link">Thư viện sách</a>
-                                    <a href="#!" class="link">Mục đích</a>
-                                    <a href="#!" class="link">
-                                        Tin tức và cập nhật</a
-                                    >
-                                    <a href="#!" class="link">
-                                        Đánh giá và nhận xét</a
-                                    >
-                                    <a href="#!" class="link">
-                                        Nhóm thảo luận</a
-                                    >
+                        </div>
+                        <div class="type">
+                            <h4 class="title">Sách mới</h4>
+                            <div class="detail">
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/newbook1.webp"
+                                            alt="East Wind West Wind"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                East Wind West Wind
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Pearl S. Buck
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/newbook2.webp"
+                                            alt="Điểm Danh Đồng Đội"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Điểm Danh Đồng Đội
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">Tác giả: Phạm Sĩ Sáu</p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/newbook3.webp"
+                                            alt="Kế Toán Vỉa Hè"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Kế Toán Vỉa Hè
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Darrell Mullis
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/newbook4.webp"
+                                            alt="Giờ Thứ 25"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Giờ Thứ 25
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: C. V. Gheorghiu
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="inf-link">
-                                <h4 class="title">Liên hệ</h4>
-                                <div class="links">
-                                    <a href="mailto:vonhu2875@gmail.com"
-                                        >Email: vonhu2875@gmail.com</a
-                                    >
-                                    <a href="012345678">Hotline: 012345678</a>
+                        </div>
+                        <div class="type">
+                            <h4 class="title">Sách tuổi học trò</h4>
+                            <div class="detail">
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/studentbook1.webp"
+                                            alt="Thằng Côn"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">Thằng Côn</h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">Tác giả: Duyên Anh</p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/studentbook2.webp"
+                                            alt="Xin Lỗi Mày, Tai To"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Xin Lỗi Mày, Tai To
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Nguyễn Nhật Ánh
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/studentbook3.webp"
+                                            alt="Xanh như mây trời"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Xanh như mây trời
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Darrell Mullis
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="images">
+                                        <img
+                                            src="./assets/image/studentbook4.webp"
+                                            alt="Hoàng tử bé"
+                                            class="image"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <h5 class="sub-title">
+                                                Hoàng tử bé
+                                            </h5>
+                                            <div class="star-block">
+                                                <img
+                                                    src="./assets/image/Star.svg"
+                                                    alt=""
+                                                    class="star"
+                                                />
+                                                <span class="stat">4.5</span>
+                                            </div>
+                                        </div>
+                                        <p class="desc">
+                                            Tác giả: Antoine De Saint Exupéry
+                                        </p>
+                                        <div class="row row-2">
+                                            <a href="#!" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                ></i>
+                                                <span class="icon-inf"
+                                                    >Thích</span
+                                                >
+                                            </a>
+
+                                            <a href="#!" class="link-cta"
+                                                >Tải sách về</a
+                                            >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </section>
+                <!-- News -->
+                <section class="news" id="newsId">
+                    <div class="content">
+                        <div class="subject">
+                            <h2 class="subject-title">Tin tức và cập nhật</h2>
+                            <p class="desc">
+                                Cung cấp thông tin mới nhất về sách, bao gồm ra
+                                mắt sách mới, đánh giá, phỏng vấn tác giả, và sự
+                                kiện văn hóa. Đây là nơi kết nối những người yêu
+                                sách và cập nhật xu hướng mới nhất trong thế
+                                giới văn học.
+                            </p>
+                        </div>
+                        <div class="body">
+                            <div>
+                                <div class="container">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-solid fa-arrow-trend-up small-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-chart-column big-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Nổi bật</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="container update-book">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-solid fa-upload small-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-regular fa-address-book big-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Cập nhật sách mới</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="container book-events">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-solid fa-book-open small-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-regular fa-calendar big-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Sự kiện sách</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="container">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-regular fa-newspaper small-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-users big-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Tin tức cộng đồng</h3>
+                                </div>
+                            </div>
+                            <!-- <div></div> -->
+                            <div>
+                                <div class="container author">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-solid fa-microphone-lines big-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-solid fa-feather small-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Phỏng vấn tác giả</h3>
+                                </div>
+                            </div>
+                            <!-- <div></div> -->
+                            <div>
+                                <div class="container blogs">
+                                    <div class="icon">
+                                        <a href="#!" class="link-icon"
+                                            ><i
+                                                class="fa-solid fa-blog big-icon"
+                                            ></i>
+                                            <i
+                                                class="fa-regular fa-address-card small-icon"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <div class="block"></div>
+                                    <h3 class="sub-title">Blogs</h3>
+                                </div>
+                            </div>
+                            <!-- <div></div> -->
+                        </div>
+                        <div class="information"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer>
+            <div class="content">
+                <div class="inf">
+                    <div class="inf-desc">
+                        <h1><a href="#" class="logo">Books.</a></h1>
+                        <p class="desc">
+                            Chúng tôi luôn cố gắng để tạo ra một cộng đồng lành
+                            mạnh dành cho những người yêu sách. Mong được sự hỗ
+                            trợ, góp ý từ các bạn để cộng đồng Books. được trở
+                            nên lớn mạnh hơn.
+                        </p>
+                    </div>
+                    <div class="inf-links">
+                        <div class="inf-link">
+                            <h4 class="title">Về Books</h4>
+                            <div class="links">
+                                <a href="#idIntro-1" class="link">Sứ mệnh</a>
+                                <a href="#idIntro-2" class="link">Mục đích</a>
+                                <a href="#idResource" class="link"
+                                    >Tài nguyên</a
+                                >
+                            </div>
+                        </div>
+                        <div class="inf-link">
+                            <h4 class="title">Tính năng</h4>
+                            <div class="links">
+                                <a href="#!" class="link">Thư viện sách</a>
+                                <a href="#!" class="link">Mục đích</a>
+                                <a href="#!" class="link">
+                                    Tin tức và cập nhật</a
+                                >
+                                <a href="#!" class="link">
+                                    Đánh giá và nhận xét</a
+                                >
+                                <a href="#!" class="link"> Nhóm thảo luận</a>
+                            </div>
+                        </div>
+                        <div class="inf-link">
+                            <h4 class="title">Liên hệ</h4>
+                            <div class="links">
+                                <a href="mailto:vonhu2875@gmail.com"
+                                    >Email: vonhu2875@gmail.com</a
+                                >
+                                <a href="012345678">Hotline: 012345678</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </footer>
-        </div>
+            </div>
+        </footer>
     </body>
 </html>
