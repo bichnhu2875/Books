@@ -22,6 +22,11 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         />
+        <!-- Animate -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <!-- Styles.css -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
         <link
@@ -30,10 +35,16 @@
             type="image/x-icon"
         />
         <!-- Script -->
-        <script src="./js/script.js"></script>
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <title>Books. - Cộng đồng đọc sách</title>
     </head>
     <body>
+        <!-- Go to top -->
+        <a href="javascript:;" class="top" id="gotoTop"
+            ><i class="fa-solid fa-arrow-up"></i
+        ></a>
         <!-- header -->
         <header>
             <div class="content">
@@ -47,8 +58,18 @@
                 </div>
 
                 <div class="button">
-                    <a href="#regId" id="idRegister"> Đăng ký </a>
-                    <a href="#loginId" id="idLogin" class="btn"> Đăng nhập </a>
+                    <a href="#regId" id="idRegister" class="regbtn">
+                        Đăng ký
+                    </a>
+                    <a href="#loginId" id="idLogin" class="loginbtn btn">
+                        Đăng nhập
+                    </a>
+                </div>
+                <div class="info-user">
+                    <div class="avatar-user">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <p class="name-user">Võ Thị Bích Như</p>
                 </div>
             </div>
         </header>
@@ -89,7 +110,7 @@
                         </a>
                     </li>
                     <li class="item">
-                        <a href="#idResource" class="link"
+                        <a href="#idGroup" class="link"
                             ><i class="fa-solid fa-users icon"></i>
                             <span class="subtitle">Nhóm thảo luận</span>
                         </a>
@@ -119,7 +140,9 @@
                                     xét của bạn với cộng đồng.
                                 </p>
                                 <div class="button-link">
-                                    <a href="#!" class="btn">Tìm hiểu thêm</a>
+                                    <a href="#regId" class="btn-cta btn"
+                                        >Tìm hiểu thêm</a
+                                    >
                                 </div>
                                 <p class="desc desc-stats">
                                     Hiện tại, đã có hơn:
@@ -208,6 +231,10 @@
                                         class="fa-solid fa-book"
                                         style="color: #200b28"
                                     ></i>
+                                    <h3 class="resource-title">
+                                        Thư viện sách
+                                    </h3>
+                                    <div></div>
                                 </div>
                                 <div class="info">
                                     <h3 class="resource-title">
@@ -220,9 +247,9 @@
                                         ngành, đến các tác phẩm văn học kinh
                                         điển.
                                     </p>
-                                    <a href="#!" class="link-cta"
+                                    <!-- <a href="#!" class="link-cta"
                                         >Tìm hiểu thêm</a
-                                    >
+                                    > -->
                                 </div>
                             </div>
                             <div class="resource">
@@ -231,6 +258,10 @@
                                         class="fa-brands fa-searchengin"
                                         style="color: #1f0d54"
                                     ></i>
+                                    <h3 class="resource-title">
+                                        Tìm kiếm nhanh
+                                    </h3>
+                                    <div></div>
                                 </div>
                                 <div class="info">
                                     <h3 class="resource-title">
@@ -241,9 +272,9 @@
                                         nhanh chóng tìm thấy sách mà họ quan tâm
                                         theo tên, tác giả, hoặc thể loại.
                                     </p>
-                                    <a href="#!" class="link-cta"
+                                    <!-- <a href="#!" class="link-cta"
                                         >Tìm hiểu thêm</a
-                                    >
+                                    > -->
                                 </div>
                             </div>
                             <div class="resource">
@@ -252,6 +283,10 @@
                                         class="fa-regular fa-newspaper"
                                         style="color: #22775d"
                                     ></i>
+                                    <h3 class="resource-title">
+                                        Tin tức và cập nhật
+                                    </h3>
+                                    <div></div>
                                 </div>
                                 <div class="info">
                                     <h3 class="resource-title">
@@ -262,9 +297,9 @@
                                         giới sách, từ các sự kiện ra mắt sách
                                         đến các tin tức về tác giả.
                                     </p>
-                                    <a href="#!" class="link-cta"
+                                    <!-- <a href="#!" class="link-cta"
                                         >Tham gia ngay</a
-                                    >
+                                    > -->
                                 </div>
                             </div>
                             <div class="resource">
@@ -273,6 +308,10 @@
                                         class="fa-regular fa-comment"
                                         style="color: #360c25"
                                     ></i>
+                                    <h3 class="resource-title">
+                                        Đánh giá và nhận xét
+                                    </h3>
+                                    <div></div>
                                 </div>
                                 <div class="info">
                                     <h3 class="resource-title">
@@ -283,9 +322,9 @@
                                         nhận xét, nơi họ có thể viết và chia sẻ
                                         suy nghĩ về những cuốn sách đã đọc.
                                     </p>
-                                    <a href="#!" class="link-cta"
+                                    <!-- <a href="#!" class="link-cta"
                                         >Tham gia ngay</a
-                                    >
+                                    > -->
                                 </div>
                             </div>
                             <div class="resource">
@@ -294,6 +333,10 @@
                                         class="fa-solid fa-user-group"
                                         style="color: #082622"
                                     ></i>
+                                    <h3 class="resource-title">
+                                        Nhóm thảo luận
+                                    </h3>
+                                    <div></div>
                                 </div>
                                 <div class="info">
                                     <h3 class="resource-title">
@@ -306,9 +349,9 @@
                                         đến việc chia sẻ các nguồn tài liệu học
                                         thuật.
                                     </p>
-                                    <a href="#!" class="link-cta"
+                                    <!-- <a href="#!" class="link-cta"
                                         >Tham gia ngay</a
-                                    >
+                                    > -->
                                 </div>
                             </div>
                         </div>
@@ -320,11 +363,19 @@
                         <form action="#!">
                             <h2 class="title">Đăng nhập</h2>
                             <div class="input-group">
-                                <input type="text" required />
+                                <input
+                                    type="text"
+                                    class="input-login username-login"
+                                    required
+                                />
                                 <label for="">Username</label>
                             </div>
                             <div class="input-group">
-                                <input type="password" required />
+                                <input
+                                    type="password"
+                                    class="input-login"
+                                    required
+                                />
                                 <label for="">Password</label>
                             </div>
                             <input
@@ -335,7 +386,7 @@
                             />
                             <div class="extra-inf">
                                 <p class="desc">Nếu bạn chưa có tài khoản?</p>
-                                <a href="#regId" class="link-cta"
+                                <a href="#regId" class="link-cta regbtn"
                                     >Đăng ký ngay</a
                                 >
                             </div>
@@ -352,22 +403,38 @@
                                 <label for="">Email</label>
                             </div>
                             <div class="input-group">
-                                <input type="password" required />
+                                <input
+                                    type="text"
+                                    class="text-input username-reg"
+                                    required
+                                />
+                                <label for="">Username</label>
+                            </div>
+                            <div class="input-group">
+                                <input
+                                    type="password"
+                                    class="text-input"
+                                    required
+                                />
                                 <label for="">Password</label>
                             </div>
                             <div class="input-group">
-                                <input type="password" required />
+                                <input
+                                    type="password"
+                                    class="text-input"
+                                    required
+                                />
                                 <label for="">Confirm Password</label>
                             </div>
                             <input
-                                href="#linkId"
+                                href="javascript:;"
                                 type="submit"
-                                class="btn"
+                                class="btn text-input"
                                 value="Đăng ký"
                             />
                             <div class="extra-inf">
                                 <p class="desc">Nếu bạn đã có tài khoản?</p>
-                                <a href="#loginId" class="link-cta"
+                                <a href="#loginId" class="link-cta loginbtn"
                                     >Đăng nhập ngay</a
                                 >
                             </div>
@@ -388,31 +455,36 @@
                         <div class="search">
                             <p class="option-desc">Bạn muốn tìm kiếm theo:</p>
                             <div class="options">
-                                <a href="#!" class="option-btn">Thể loại</a>
-                                <a href="#!" class="option-btn">Tên sách</a>
-                                <a href="#!" class="option-btn">Tác giả</a>
+                                <a href="#all" class="option-btn">All</a>
+                                <a href="#type" class="option-btn">Thể loại</a>
+                                <a href="#bookName" class="option-btn"
+                                    >Tên sách</a
+                                >
+                                <a href="#author" class="option-btn">Tác giả</a>
                             </div>
                         </div>
                         <div class="text-options">
                             <input
-                                type="text"
+                                type="search"
                                 placeholder="Nhập thể loại bạn muốn tìm"
                                 class="text-option"
+                                id="type"
                             />
                             <input
-                                type="text"
+                                type="search"
                                 placeholder="Nhập tên sách bạn muốn tìm"
                                 class="text-option"
+                                id="bookName"
                             />
                             <input
-                                type="text"
+                                type="search"
                                 placeholder="Nhập tên tác giả bạn muốn tìm"
                                 class="text-option"
+                                id="author"
                             />
                         </div>
-                        <div class="type">
-                            <h4 class="title">Sách được quan tâm</h4>
-
+                        <div class="typeBook">
+                            <h4 class="title type">Sách được quan tâm</h4>
                             <div class="detail">
                                 <div class="container">
                                     <div class="images">
@@ -424,7 +496,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 The Future Is Immersive
                                             </h5>
                                             <div class="star-block">
@@ -437,14 +509,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Yuval Noah Harari
+                                            Tác giả:
+                                            <span class="author"
+                                                >Yuval Noah Harari</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like1" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like1"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like1Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -465,8 +543,8 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
-                                                The Future Is Immersive
+                                            <h5 class="sub-title bookName">
+                                                Rừng Nauy
                                             </h5>
                                             <div class="star-block">
                                                 <img
@@ -478,14 +556,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Haruki Murakami , Trịnh Lữ
+                                            Tác giả:
+                                            <span class="author"
+                                                >Haruki Murakami, Trịnh Lữ</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like2" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like2"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like2Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -506,7 +590,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Thư Viện Nửa Đêm
                                             </h5>
                                             <div class="star-block">
@@ -518,13 +602,21 @@
                                                 <span class="stat">4.5</span>
                                             </div>
                                         </div>
-                                        <p class="desc">Tác giả: Matt Haig</p>
+                                        <p class="desc">
+                                            Tác giả:
+                                            <span class="author"
+                                                >Matt Haig</span
+                                            >
+                                        </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like3" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like3"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like3Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -545,7 +637,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Sao chúng ta lại ngủ
                                             </h5>
                                             <div class="star-block">
@@ -558,14 +650,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Matthew Walker
+                                            Tác giả:
+                                            <span class="author"
+                                                >Matthew Walker</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like4" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like4"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like4Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -586,7 +684,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Người Đàn Ông Mang Tên Ove
                                             </h5>
                                             <div class="star-block">
@@ -599,14 +697,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Fredrik Backman
+                                            Tác giả:
+                                            <span class="author"
+                                                >Fredrik Backman</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like5" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like5"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like5Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -627,7 +731,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Con Chim Xanh Biếc Bay Về
                                             </h5>
                                             <div class="star-block">
@@ -640,14 +744,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Nguyễn Nhật Ánh
+                                            Tác giả:
+                                            <span class="author"
+                                                >Nguyễn Nhật Ánh</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like6" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like6"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like6Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -660,8 +770,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="type">
-                            <h4 class="title">Sách mới</h4>
+                        <div class="typeBook">
+                            <h4 class="title type">Sách mới</h4>
                             <div class="detail">
                                 <div class="container">
                                     <div class="images">
@@ -673,7 +783,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 East Wind West Wind
                                             </h5>
                                             <div class="star-block">
@@ -686,14 +796,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Pearl S. Buck
+                                            Tác giả:
+                                            <span class="author"
+                                                >Pearl S. Buck</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like7" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like7"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like7Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -714,7 +830,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Điểm Danh Đồng Đội
                                             </h5>
                                             <div class="star-block">
@@ -726,13 +842,21 @@
                                                 <span class="stat">4.5</span>
                                             </div>
                                         </div>
-                                        <p class="desc">Tác giả: Phạm Sĩ Sáu</p>
+                                        <p class="desc">
+                                            Tác giả:
+                                            <span class="author"
+                                                >Phạm Sĩ Sáu</span
+                                            >
+                                        </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like8" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like8"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like8Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -753,7 +877,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Kế Toán Vỉa Hè
                                             </h5>
                                             <div class="star-block">
@@ -766,14 +890,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Darrell Mullis
+                                            Tác giả:
+                                            <span class="author"
+                                                >Darrell Mullis</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like9" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like9"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like9Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -794,7 +924,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Giờ Thứ 25
                                             </h5>
                                             <div class="star-block">
@@ -807,14 +937,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: C. V. Gheorghiu
+                                            Tác giả:
+                                            <span class="author"
+                                                >C. V. Gheorghiu</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like10" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like10"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like10Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -827,8 +963,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="type">
-                            <h4 class="title">Sách tuổi học trò</h4>
+                        <div class="typeBook">
+                            <h4 class="title type">Sách tuổi học trò</h4>
                             <div class="detail">
                                 <div class="container">
                                     <div class="images">
@@ -850,13 +986,21 @@
                                                 <span class="stat">4.5</span>
                                             </div>
                                         </div>
-                                        <p class="desc">Tác giả: Duyên Anh</p>
+                                        <p class="desc">
+                                            Tác giả:
+                                            <span class="author"
+                                                >Duyên Anh</span
+                                            >
+                                        </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like11" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like11"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like11Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -877,7 +1021,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Xin Lỗi Mày, Tai To
                                             </h5>
                                             <div class="star-block">
@@ -890,14 +1034,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Nguyễn Nhật Ánh
+                                            Tác giả:
+                                            <span class="author"
+                                                >Nguyễn Nhật Ánh</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like12" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like12"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like12Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -918,7 +1068,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Xanh như mây trời
                                             </h5>
                                             <div class="star-block">
@@ -931,14 +1081,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Darrell Mullis
+                                            Tác giả:
+                                            <span class="author"
+                                                >Darrell Mullis</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like13" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like13"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like13Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -959,7 +1115,7 @@
                                     </div>
                                     <div class="info">
                                         <div class="row">
-                                            <h5 class="sub-title">
+                                            <h5 class="sub-title bookName">
                                                 Hoàng tử bé
                                             </h5>
                                             <div class="star-block">
@@ -972,14 +1128,20 @@
                                             </div>
                                         </div>
                                         <p class="desc">
-                                            Tác giả: Antoine De Saint Exupéry
+                                            Tác giả:
+                                            <span class="author"
+                                                >Antoine De Saint Exupéry</span
+                                            >
                                         </p>
                                         <div class="row row-2">
-                                            <a href="#!" class="icon"
+                                            <a href="#like14" class="icon"
                                                 ><i
                                                     class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like14"
                                                 ></i>
-                                                <span class="icon-inf"
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like14Inf"
                                                     >Thích</span
                                                 >
                                             </a>
@@ -992,6 +1154,7 @@
                                 </div>
                             </div>
                         </div>
+                        <p class="desc">Không tìm thấy kết quả</p>
                     </div>
                 </section>
                 <!-- News -->
@@ -1011,7 +1174,7 @@
                             <div>
                                 <div class="container">
                                     <div class="icon">
-                                        <a href="#!" class="link-icon"
+                                        <a href="#hotNewsId" class="link-icon"
                                             ><i
                                                 class="fa-solid fa-arrow-trend-up small-icon"
                                             ></i>
@@ -1021,13 +1184,17 @@
                                         </a>
                                     </div>
                                     <div class="block"></div>
-                                    <h3 class="sub-title">Nổi bật</h3>
+                                    <h3 class="sub-title">
+                                        <a href="#hotNewsId">Nổi bật</a>
+                                    </h3>
                                 </div>
                             </div>
                             <div>
                                 <div class="container update-book">
                                     <div class="icon">
-                                        <a href="#!" class="link-icon"
+                                        <a
+                                            href="#bookUpdateId"
+                                            class="link-icon"
                                             ><i
                                                 class="fa-solid fa-upload small-icon"
                                             ></i>
@@ -1037,13 +1204,17 @@
                                         </a>
                                     </div>
                                     <div class="block"></div>
-                                    <h3 class="sub-title">Cập nhật sách mới</h3>
+                                    <h3 class="sub-title">
+                                        <a href="#bookUpdateId"
+                                            >Cập nhật sách mới</a
+                                        >
+                                    </h3>
                                 </div>
                             </div>
                             <div>
                                 <div class="container book-events">
                                     <div class="icon">
-                                        <a href="#!" class="link-icon"
+                                        <a href="#bookEventId" class="link-icon"
                                             ><i
                                                 class="fa-solid fa-book-open small-icon"
                                             ></i>
@@ -1053,13 +1224,17 @@
                                         </a>
                                     </div>
                                     <div class="block"></div>
-                                    <h3 class="sub-title">Sự kiện sách</h3>
+                                    <h3 class="sub-title">
+                                        <a href="#bookEventId">Sự kiện sách</a>
+                                    </h3>
                                 </div>
                             </div>
                             <div>
                                 <div class="container">
                                     <div class="icon">
-                                        <a href="#!" class="link-icon"
+                                        <a
+                                            href="#bookCommunityId"
+                                            class="link-icon"
                                             ><i
                                                 class="fa-regular fa-newspaper small-icon"
                                             ></i>
@@ -1069,31 +1244,17 @@
                                         </a>
                                     </div>
                                     <div class="block"></div>
-                                    <h3 class="sub-title">Tin tức cộng đồng</h3>
+                                    <h3 class="sub-title">
+                                        <a href="#bookCommunityId"
+                                            >Tin tức cộng đồng</a
+                                        >
+                                    </h3>
                                 </div>
                             </div>
-                            <!-- <div></div> -->
-                            <div>
-                                <div class="container author">
-                                    <div class="icon">
-                                        <a href="#!" class="link-icon"
-                                            ><i
-                                                class="fa-solid fa-microphone-lines big-icon"
-                                            ></i>
-                                            <i
-                                                class="fa-solid fa-feather small-icon"
-                                            ></i>
-                                        </a>
-                                    </div>
-                                    <div class="block"></div>
-                                    <h3 class="sub-title">Phỏng vấn tác giả</h3>
-                                </div>
-                            </div>
-                            <!-- <div></div> -->
                             <div>
                                 <div class="container blogs">
                                     <div class="icon">
-                                        <a href="#!" class="link-icon"
+                                        <a href="#blogsId" class="link-icon"
                                             ><i
                                                 class="fa-solid fa-blog big-icon"
                                             ></i>
@@ -1103,12 +1264,375 @@
                                         </a>
                                     </div>
                                     <div class="block"></div>
-                                    <h3 class="sub-title">Blogs</h3>
+                                    <h3 class="sub-title">
+                                        <a href="#blogsId">Blogs</a>
+                                    </h3>
                                 </div>
                             </div>
-                            <!-- <div></div> -->
                         </div>
-                        <div class="information"></div>
+                        <div class="information">
+                            <div class="info" id="hotNewsId">
+                                <h4 class="title">Tin nổi bật</h4>
+                                <div class="container">
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">50 phút trước</p>
+                                            <h5 class="title-news">
+                                                Ra mắt bộ sách điện tử 90 tập
+                                                Việt Nam thời đại Hồ Chí Minh -
+                                                Biên niên sử truyền hình.
+                                            </h5>
+                                            <p class="desc">
+                                                Phát sóng phim tài liệu Việt Nam
+                                                Thời đại Hồ Chí Minh - Biên niên
+                                                sử truyền hình.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-1.webp"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">1 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Chủ tịch Hội Nhà văn Việt Nam
+                                                khẳng định có những kế hoạch
+                                                nhiều triệu đô để quảng bá văn
+                                                học Việt
+                                            </h5>
+                                            <p class="desc">
+                                                Chủ tịch Hội Nhà văn Việt Nam,
+                                                nhà thơ Nguyễn Quang Thiều khẳng
+                                                định đã có những kế hoạch nhiều
+                                                triệu đô để quảng bá văn học
+                                                Việt Nam ra thế giới.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-2.jpg"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">2 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Lê Minh Quốc lắt léo và lịch lãm
+                                                cùng tiếng Việt
+                                            </h5>
+                                            <p class="desc">
+                                                Sau Lắt léo tiếng Việt xuất bản
+                                                năm 2017, nhà thơ Lê Minh Quốc
+                                                trở lại với Tiếng Việt lắt léo
+                                                và lịch lãm, tiếp nối hành trình
+                                                nhiều năm tìm hiểu và yêu tiếng
+                                                Việt.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-3.webp"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info" id="bookUpdateId">
+                                <h4 class="title">Cập nhật sách mới</h4>
+                                <div class="container">
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">50 phút trước</p>
+                                            <h5 class="title-news">
+                                                Ra Mắt Cuốn Sách 'Vùng Đất Bí
+                                                Ẩn' - Cuộc Phiêu Lưu Mới Của Tác
+                                                Giả Lừng Danh
+                                            </h5>
+                                            <p class="desc">
+                                                Cuốn sách mới nhất của tác giả
+                                                nổi tiếng đã chính thức lên kệ.
+                                                'Vùng Đất Bí Ẩn' hứa hẹn sẽ mang
+                                                đến cho độc giả một hành trình
+                                                đầy kịch tính, với những tình
+                                                tiết gay cấn và bất ngờ ở mỗi
+                                                trang sách.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-4.webp"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">1 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Bộ Sách 'Khoa Học Thú Vị' - Mở
+                                                Rộng Tầm Nhìn Cho Độc Giả Trẻ
+                                            </h5>
+                                            <p class="desc">
+                                                Bộ sách 'Khoa Học Thú Vị' vừa
+                                                được xuất bản với nội dung phong
+                                                phú, được thiết kế dành riêng
+                                                cho các bạn trẻ yêu thích khám
+                                                phá. Với hình ảnh minh họa sống
+                                                động và ngôn ngữ dễ hiểu, bộ
+                                                sách này là người bạn đồng hành
+                                                tuyệt vời cho các nhà khoa học
+                                                tương lai.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-5.jpg"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">2 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Phát Hành Cuốn Tiểu Thuyết 'Mưa'
+                                                - Tác Phẩm Được Mong Đợi Nhất
+                                                Mùa Hè.
+                                            </h5>
+                                            <p class="desc">
+                                                Sau nhiều tháng chờ đợi, cuốn
+                                                tiểu thuyết 'Mưa' đã được ra mắt
+                                                và ngay lập tức thu hút sự chú ý
+                                                của cộng đồng yêu sách. Được
+                                                viết bởi một tác giả trẻ đầy
+                                                triển vọng, cuốn sách này kể về
+                                                những câu chuyện tình yêu đầy
+                                                cảm xúc giữa những cơn mưa mùa
+                                                hạ.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img
+                                                src="./assets/image/news-6.jpg"
+                                                alt="Ho Chi Minh"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info" id="bookEventId">
+                                <h4 class="title">Sự kiện sách</h4>
+                                <div class="container">
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">50 phút trước</p>
+                                            <h5 class="title-news">
+                                                Tháng Đọc Sách Tháng 9: Cùng
+                                                Nhau Khám Phá Thế Giới Tri Thức
+                                            </h5>
+                                            <p class="desc">
+                                                Hãy cùng chúng tôi chào đón
+                                                Tháng Đọc Sách Tháng 9 với hàng
+                                                loạt hoạt động thú vị như cuộc
+                                                thi viết review sách, các buổi
+                                                thảo luận chuyên sâu, và chương
+                                                trình khuyến mãi đặc biệt dành
+                                                riêng cho thành viên của trang
+                                                web.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">1 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Chuỗi Hội Thảo 'Sách Và Đời
+                                                Sống' - Mở Rộng Tầm Nhìn
+                                            </h5>
+                                            <p class="desc">
+                                                Chúng tôi tổ chức chuỗi hội thảo
+                                                'Sách Và Đời Sống', nơi các diễn
+                                                giả sẽ chia sẻ về những cuốn
+                                                sách có ảnh hưởng sâu sắc đến
+                                                cuộc sống và sự nghiệp của họ.
+                                                Sự kiện được phát trực tuyến và
+                                                mở cửa cho tất cả thành viên.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">2 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Sự Kiện Ký Tặng Sách Trực Tuyến
+                                                - Gặp Gỡ Tác Giả Yêu Thích
+                                            </h5>
+                                            <p class="desc">
+                                                Độc giả của trang web sẽ có cơ
+                                                hội tham gia sự kiện ký tặng
+                                                sách trực tuyến với các tác giả
+                                                nổi tiếng. Đây là dịp để bạn
+                                                giao lưu và nhận chữ ký từ xa
+                                                cho cuốn sách yêu thích của
+                                                mình.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info" id="bookCommunityId">
+                                <h4 class="title">Tin tức cộng đồng</h4>
+                                <div class="container">
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">50 phút trước</p>
+                                            <h5 class="title-news">
+                                                Ra Mắt Câu Lạc Bộ Đọc Sách Địa
+                                                Phương
+                                            </h5>
+                                            <p class="desc">
+                                                Cộng đồng chúng ta vừa ra mắt
+                                                một Câu lạc bộ Đọc Sách mới dành
+                                                riêng cho các thành viên tại địa
+                                                phương. Đây là nơi bạn có thể
+                                                gặp gỡ những người có cùng đam
+                                                mê, cùng nhau thảo luận và chia
+                                                sẻ về những cuốn sách yêu thích.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">1 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Cuộc Thi Viết Tiểu Thuyết Ngắn
+                                                Trong Cộng Đồng
+                                            </h5>
+                                            <p class="desc">
+                                                Cuộc thi viết tiểu thuyết ngắn
+                                                đã bắt đầu! Các thành viên được
+                                                khuyến khích tham gia và thể
+                                                hiện tài năng sáng tác. Những
+                                                câu chuyện sáng tạo và độc đáo
+                                                sẽ được đánh giá và trao giải
+                                                thưởng hấp dẫn.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">2 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Chương Trình Trao Đổi Sách Giữa
+                                                Các Thành Viên
+                                            </h5>
+                                            <p class="desc">
+                                                Chương trình trao đổi sách là cơ
+                                                hội tuyệt vời để các thành viên
+                                                chia sẻ những cuốn sách họ yêu
+                                                thích với nhau. Hãy tham gia để
+                                                tìm kiếm những tác phẩm mới và
+                                                làm phong phú thêm bộ sưu tập
+                                                sách của bạn.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info" id="blogsId">
+                                <h4 class="title">Blogs</h4>
+                                <div class="container">
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">50 phút trước</p>
+                                            <h5 class="title-news">
+                                                Top 5 Cuốn Sách Nên Đọc Trước
+                                                Tuổi 30
+                                            </h5>
+                                            <p class="desc">
+                                                Dưới đây là danh sách những cuốn
+                                                sách mà bất kỳ ai cũng nên đọc
+                                                trước khi bước qua ngưỡng cửa
+                                                tuổi 30. Những tác phẩm này
+                                                không chỉ mang lại tri thức mà
+                                                còn giúp bạn hiểu sâu hơn về
+                                                cuộc sống và chính bản thân
+                                                mình.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">1 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Cách Tạo Thói Quen Đọc Sách Mỗi
+                                                Ngày
+                                            </h5>
+                                            <p class="desc">
+                                                Việc đọc sách mỗi ngày có thể
+                                                giúp bạn cải thiện tư duy, mở
+                                                rộng kiến thức và giảm stress.
+                                                Bài viết này sẽ chia sẻ những
+                                                mẹo hữu ích để biến việc đọc
+                                                sách thành thói quen hàng ngày.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail-content">
+                                            <p class="time">2 ngày trước</p>
+                                            <h5 class="title-news">
+                                                Lợi Ích Của Việc Tham Gia Câu
+                                                Lạc Bộ Đọc Sách
+                                            </h5>
+                                            <p class="desc">
+                                                Tham gia một câu lạc bộ đọc sách
+                                                không chỉ giúp bạn mở rộng kiến
+                                                thức mà còn mang lại cơ hội gặp
+                                                gỡ những người bạn có cùng đam
+                                                mê. Bài viết này sẽ chỉ ra những
+                                                lợi ích khi trở thành thành viên
+                                                của một câu lạc bộ sách.
+                                            </p>
+                                        </div>
+                                        <div class="image">
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
