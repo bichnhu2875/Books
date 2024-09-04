@@ -31,7 +31,7 @@ header .button a:first-child {
 .resource {
     width: 100%;
     min-width: 0;
-    padding: 71px 20px;
+    padding: 30px;
 }
 
 .resource:hover {
@@ -51,6 +51,10 @@ header .button a:first-child {
 
 .resource .image i {
     transition: none;
+}
+
+.resource:hover .image i {
+    visibility: hidden;
 }
 
 /* form */
