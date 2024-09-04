@@ -1,0 +1,114 @@
+.content {
+    max-width: calc(100% - 20px);
+}
+
+/* header */
+header .bar {
+    display: none;
+}
+
+header .content-inf {
+    width: 100%;
+}
+
+header .button a:first-child {
+    display: none;
+}
+
+/* hero */
+
+.hero .info {
+    padding: 0;
+    min-width: 0;
+}
+
+/* intro */
+.section-intro {
+    padding: 50px 0;
+}
+
+/* resource */
+.resource {
+    width: 100%;
+    min-width: 0;
+    padding: 71px 20px;
+}
+
+.resource:hover {
+    transform: scale(1);
+}
+
+.resource .info {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.resource .image .resource-title {
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.resource .image i {
+    transition: none;
+}
+
+/* form */
+section.login .content {
+    padding: 34px 21px;
+}
+
+/* footer */
+footer .content {
+    max-width: calc(100% - 20px);
+}
+
+footer .inf-links {
+    flex-wrap: wrap;
+}
+
+footer .inf-link:last-child {
+    margin-top: 30px;
+}
+
+/* lib */
+.search .option-btn {
+    min-width: 0;
+    padding: 7px 7px;
+}
+.search .option-btn + .option-btn {
+    margin-left: 10px;
+}
+
+.library .container {
+    width: 100%;
+    max-width: 330px;
+}
+
+/* news */
+.news .body > div {
+    flex-basis: 80%;
+}
+.news .information .container {
+    width: 100%;
+    padding: 0;
+    border: none;
+}
+
+.news .information .detail {
+    flex-direction: column-reverse;
+    border-bottom: 1px solid lightgrey;
+}
+
+.news .information .detail::after {
+    display: none;
+}
+
+.news .detail-content {
+    padding: 0;
+}
+
+.news .detail .image {
+    width: 100%;
+    overflow: hidden;
+}

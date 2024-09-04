@@ -45,7 +45,20 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
+header .bar {
+    display: none;
+}
+
+header .bar i {
+    font-size: 3.6rem;
+    margin-left: 3px;
+}
+
 header .content {
+    display: flex;
+}
+
+header .content-inf {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -166,7 +179,7 @@ header p.name-user {
 }
 
 nav {
-    min-width: 86px;
+    min-width: 90px;
     width: 7%;
     position: sticky;
     left: 0;
@@ -222,17 +235,28 @@ nav .items .subtitle {
 .hero {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero .image {
+    width: 40%;
+    max-width: 100%;
 }
 
 .hero .image-book {
-    width: 470px;
+    width: 100%;
+    min-width: 260px;
     height: 685px;
     object-fit: cover;
     border-radius: 24px;
 }
 
 .hero .info {
-    width: 470px;
+    /* width: 470px; */
+    width: 50%;
+    max-width: 100%;
+    min-width: 400px;
     padding: 64px 0;
 }
 
@@ -327,7 +351,7 @@ nav .items .subtitle {
 .intro .title {
     text-shadow: 2px 2px 2px rgba(255, 185, 0, 0.6);
     color: #ffb900;
-    font-size: 3.8rem;
+    font-size: 4.8rem;
     font-weight: 700;
     letter-spacing: -0.76px;
     margin-bottom: 65px;
@@ -385,7 +409,6 @@ nav .items .subtitle {
 
 .intro .row-1 {
     margin-bottom: 70px;
-    margin-left: 20px;
 }
 
 .intro .row-2 {
@@ -417,20 +440,19 @@ nav .items .subtitle {
 
 .section-resources .row .desc {
     width: 486px;
-    margin: 16px 0;
+    margin: 16px 0 111px;
     text-align: center;
     color: #696262;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.75;
-    margin-bottom: 75px;
     max-width: 100%;
 }
 
 .resources-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 40px;
+    gap: 90px 43px;
     justify-content: center;
 }
 
@@ -453,7 +475,7 @@ nav .items .subtitle {
 }
 
 .resource:hover {
-    transform: scale(1.01);
+    transform: scale(1.1);
     border: 3px solid #ffb900;
 }
 
@@ -486,7 +508,7 @@ nav .items .subtitle {
 }
 
 .resource:hover .image i {
-    transform: translateX(350%);
+    transform: translateX(340%);
 }
 
 .resource .info {
@@ -757,6 +779,7 @@ section.login .title {
 .library .container .images {
     /* img là thẻ inline, nằm trong thẻ block là images => dùng thuộc tính ở dưới để căn giữa hình ảnh */
     text-align: center;
+    width: 100%;
     /* padding-top: 16px; */
 }
 
@@ -779,10 +802,10 @@ section.login .title {
 }
 
 .library .detail .image {
-    width: 200px;
-    height: 300px;
+    padding: 0 30px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    background: orange;
 }
 
 .library .detail .row {
@@ -882,12 +905,11 @@ section.login .title {
 
 .news .body > div {
     padding: 0 10px;
-    /* min-width: 25%; */
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 0.5;
     min-height: 270px;
-    /* background: #fff; */
+    min-width: 210px;
 }
 
 .news .body .container {
@@ -1089,6 +1111,11 @@ section.login .title {
     height: auto;
     max-height: 200px;
     object-fit: contain;
+    transition: all 0.6s linear;
+}
+
+.news .detail img:hover {
+    transform: scale(1.2);
 }
 
 .news .info + .info {

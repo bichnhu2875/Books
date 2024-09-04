@@ -1,0 +1,127 @@
+/* ==== header ==== */
+
+header .content {
+    max-width: calc(99% - 34px);
+    align-items: center;
+}
+
+header .bar {
+    display: flex;
+    width: 105px;
+}
+
+header .content-inf {
+    width: 86%;
+}
+
+header .desc {
+    display: none;
+}
+
+/* ==== nav ==== */
+
+nav {
+    display: none;
+}
+
+/* ===== hero ===== */
+
+.hero .image {
+    display: none;
+}
+
+.hero .info {
+    width: 100%;
+    text-align: center;
+}
+
+.hero .desc-stats {
+    text-align: initial;
+    margin-bottom: 20px;
+}
+
+/* ==== intro ==== */
+
+.intro .row + .row {
+    margin-top: 100px;
+}
+
+.intro .intro-1 .row {
+    padding: 25px 20px;
+    flex-direction: column-reverse;
+    box-shadow: -1px -2px 14px 8px rgba(166, 102, 18, 0.29);
+    border-radius: 10px;
+}
+
+.intro .row .inf {
+    width: 100%;
+}
+
+.intro .image {
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* ==== library ==== */
+.search {
+    flex-direction: column;
+    align-items: initial;
+}
+
+.search .options {
+    align-self: center;
+}
+
+.text-options .text-option {
+    width: 80%;
+}
+
+.library .detail {
+    justify-content: space-around;
+}
+
+.library .container {
+    width: 42%;
+    max-width: 300px;
+}
+
+/* ==== news ==== */
+.news .information .detail {
+    flex-direction: column;
+    padding: 0 0 50px 0;
+}
+
+.news .detail-content {
+    width: 100%;
+}
+
+.news .detail .image {
+    margin-top: 25px;
+    width: 80%;
+}
+
+/* ==== footer ==== */
+
+footer .content {
+    max-width: calc(99% - 120px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .inf {
+    flex-direction: column;
+}
+
+footer .inf-desc {
+    max-width: 100%;
+}
+
+footer .inf-links {
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 100%;
+}
+
+footer .links {
+    margin-top: 15px;
+}

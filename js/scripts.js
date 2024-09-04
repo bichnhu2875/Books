@@ -57,6 +57,21 @@ window.onload = function () {
         e.classList.add("animate__fadeInBottomRight");
     }
 
+    let source = document.querySelectorAll(".resource");
+    for (let s of source) {
+        s.classList.add("wow");
+    }
+
+    let oddSource = document.querySelectorAll(".resource:nth-child(odd)");
+    for (let o of oddSource) {
+        o.classList.add("animate__fadeInLeft");
+    }
+
+    let evenSource = document.querySelectorAll(".resource:nth-child(even)");
+    for (let e of evenSource) {
+        e.classList.add("animate__fadeInRight");
+    }
+
     wow = new WOW({
         boxClass: "wow", // default
         animateClass: "animate__animated", // default
@@ -210,20 +225,19 @@ window.onload = function () {
     let submit = document.querySelectorAll("input[type=submit]");
     let Check = "0";
 
-    let username; //luu ten
+    let user;
+    let valUser;
     for (let s of submit) {
         $(s).click(function () {
+            Check = "0";
             let typeBtn = $(s).attr("value");
             if (typeBtn === "Đăng ký") {
-                Check = "0";
                 let emailCheck = document.querySelector("input[type=email]");
                 let val = $(emailCheck).val();
                 if (val === "") {
                     alert("Vui lòng nhập email");
                     Check = "1";
-                    return;
                 }
-
                 let checks = document.querySelectorAll(".text-input");
                 for (let c of checks) {
                     let valueC = $(c).val();
@@ -233,10 +247,8 @@ window.onload = function () {
                         break;
                     }
                 }
-                let user = document.querySelector(".username-reg");
-                let valUser = $(user).val();
-                $("header .info-user").show();
-                $(".name-user").text(`${valUser}`);
+                user = document.querySelector(".username-reg");
+                valUser = $(user).val();
             } else if (typeBtn === "Đăng nhập") {
                 Check = "0";
                 let checks = document.querySelectorAll(".input-login");
@@ -248,21 +260,21 @@ window.onload = function () {
                         break;
                     }
                 }
-                let user = document.querySelector(".username-login");
-                let valUser = $(user).val();
-                $("header .info-user").show();
-                $(".name-user").text(`${valUser}`);
+                user = document.querySelector(".username-login");
+                valUser = $(user).val();
             }
             if (Check === "0") {
-                $("header .button").hide();
-                $(regForm).hide();
-                $(loginForm).hide();
                 $(privButton).show();
                 for (p of privButton) {
                     let link = $(p).attr("href");
                     // alert(link);
                     $(link).show();
                 }
+                $("header .info-user").show();
+                $(".name-user").text(`${valUser}`);
+                $("header .button").hide();
+                $(regForm).hide();
+                $(loginForm).hide();
             }
         });
     }

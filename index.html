@@ -6,6 +6,7 @@
 
         <!-- Reset css -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
+
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +35,17 @@
             href="./assets/image/Books.logo.png"
             type="image/x-icon"
         />
+        <!-- Responsive -->
+        <link
+            rel="stylesheet"
+            href="./assets/css/tablet.css"
+            media="screen and (max-width:991px)"
+        />
+        <link
+            rel="stylesheet"
+            href="./assets/css/mobile.css"
+            media="screen and (max-width:767px)"
+        />
         <!-- Script -->
         <script src="./js/jquery-3.7.1.min.js"></script>
         <script src="./js/scripts.js"></script>
@@ -48,28 +60,31 @@
         <!-- header -->
         <header>
             <div class="content">
-                <div class="logo-inf">
-                    <img
-                        src="./assets/image/Books.logo.png"
-                        alt="Books."
-                        class="logo"
-                    />
-                    <p class="desc">Mở rộng kiến thức, mở rộng tương lai</p>
-                </div>
-
-                <div class="button">
-                    <a href="#regId" id="idRegister" class="regbtn">
-                        Đăng ký
-                    </a>
-                    <a href="#loginId" id="idLogin" class="loginbtn btn">
-                        Đăng nhập
-                    </a>
-                </div>
-                <div class="info-user">
-                    <div class="avatar-user">
-                        <i class="fa-solid fa-user"></i>
+                <div class="bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="content-inf">
+                    <div class="logo-inf">
+                        <img
+                            src="./assets/image/Books.logo.png"
+                            alt="Books."
+                            class="logo"
+                        />
+                        <p class="desc">Mở rộng kiến thức, mở rộng tương lai</p>
                     </div>
-                    <p class="name-user">Võ Thị Bích Như</p>
+
+                    <div class="button">
+                        <a href="#regId" id="idRegister" class="regbtn">
+                            Đăng ký
+                        </a>
+                        <a href="#loginId" id="idLogin" class="loginbtn btn">
+                            Đăng nhập
+                        </a>
+                    </div>
+                    <div class="info-user">
+                        <div class="avatar-user">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <p class="name-user">Võ Thị Bích Như</p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -122,7 +137,9 @@
                 <section class="section-hero">
                     <div class="content">
                         <div class="hero">
-                            <div class="image">
+                            <div
+                                class="image wow animate__animated animate__headShake animate__repeat-3"
+                            >
                                 <img
                                     src="./assets/image/hero-book.png"
                                     alt=""
@@ -359,7 +376,7 @@
                 </section>
                 <!-- Login -->
                 <section class="login" id="loginId">
-                    <div class="content">
+                    <div class="content animate__animated animate__backInUp">
                         <form action="#!">
                             <h2 class="title">Đăng nhập</h2>
                             <div class="input-group">
@@ -379,7 +396,7 @@
                                 <label for="">Password</label>
                             </div>
                             <input
-                                href="#linkId"
+                                href="#libraryId"
                                 type="submit"
                                 class="btn"
                                 value="Đăng nhập"
@@ -395,7 +412,9 @@
                 </section>
                 <!-- Register account -->
                 <section class="register login" id="regId">
-                    <div class="content">
+                    <div
+                        class="wow content animate__animated animate__backInUp"
+                    >
                         <form action="#!">
                             <h2 class="title">Đăng kí</h2>
                             <div class="input-group">
@@ -427,7 +446,7 @@
                                 <label for="">Confirm Password</label>
                             </div>
                             <input
-                                href="javascript:;"
+                                href="#libraryId"
                                 type="submit"
                                 class="btn text-input"
                                 value="Đăng ký"
