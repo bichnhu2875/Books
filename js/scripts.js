@@ -72,6 +72,14 @@ window.onload = function () {
         e.classList.add("animate__fadeInRight");
     }
 
+    let news = document.querySelectorAll(
+        ".news .body > div,.news .information .detail"
+    );
+    for (let n of news) {
+        n.classList.add("wow");
+        n.classList.add("animate__fadeInUp");
+    }
+
     wow = new WOW({
         boxClass: "wow", // default
         animateClass: "animate__animated", // default
@@ -103,14 +111,14 @@ window.onload = function () {
         // xử lý các ô nhập liệu xuất hiện khi ấn vào
         $(textOption).hide(); //tất cả các ô nhập liệu đều ẩn
         let name = $(this).attr("href");
-        $(name).show(); //chỉ hiện ô nhập liệu có id trùng với href của btn
+        $(name).show("slow"); //chỉ hiện ô nhập liệu có id trùng với href của btn
 
         let string = name; //Cắt id
         let stringCut = string.substring(1);
 
         if (stringCut === "all") {
-            $(".typeBook").show();
-            $(".typeBook .detail .container").show();
+            $(".typeBook").show("slow");
+            $(".typeBook .detail .container").show("slow");
         }
 
         let search = document.querySelector(`${name}`);
@@ -141,28 +149,28 @@ window.onload = function () {
                     Check = "1";
                     if (stringCut === "type") {
                         let typeOne = t.parentElement;
-                        $(typeOne).show();
+                        $(typeOne).show("slow");
                     } else if (stringCut === "bookName") {
                         let typeOne =
                             t.parentElement.parentElement.parentElement;
                         let typeB =
                             t.parentElement.parentElement.parentElement
                                 .parentElement.parentElement;
-                        $(typeB).show();
-                        $(typeOne).show();
+                        $(typeB).show("slow");
+                        $(typeOne).show("slow");
                     } else if (stringCut === "author") {
                         let typeOne =
                             t.parentElement.parentElement.parentElement;
                         let typeB =
                             t.parentElement.parentElement.parentElement
                                 .parentElement.parentElement;
-                        $(typeB).show();
-                        $(typeOne).show();
+                        $(typeB).show("slow");
+                        $(typeOne).show("slow");
                     }
                 }
             }
             if (Check === "0") {
-                $(".library .content > .desc").show();
+                $(".library .content > .desc").show("slow");
             }
         };
     });
@@ -209,14 +217,14 @@ window.onload = function () {
         $(regForm).hide();
         $(loginForm).hide();
         let a = $(regBtn).attr("href");
-        $(a).show();
+        $(a).show("slow");
     });
     let loginBtn = document.querySelectorAll(".loginbtn");
     $(loginBtn).click(function () {
         $(regForm).hide();
         $(loginForm).hide();
         let a = $(loginBtn).attr("href");
-        $(a).show();
+        $(a).show("slow");
     });
 
     /*=============Xử lý dữ liệu nhập vào đăng nhập, đăng ký  ============ */
@@ -235,14 +243,14 @@ window.onload = function () {
                 let emailCheck = document.querySelector("input[type=email]");
                 let val = $(emailCheck).val();
                 if (val === "") {
-                    alert("Vui lòng nhập email");
+                    // alert("Vui lòng nhập email");
                     Check = "1";
                 }
                 let checks = document.querySelectorAll(".text-input");
                 for (let c of checks) {
                     let valueC = $(c).val();
                     if (valueC === "") {
-                        alert("Vui long nhap day du thong tin");
+                        // alert("Vui long nhap day du thong tin");
                         Check = "1";
                         break;
                     }
@@ -255,7 +263,7 @@ window.onload = function () {
                 for (let c of checks) {
                     let vlC = $(c).val();
                     if (vlC === "") {
-                        alert("Vui long nhap day du thong tin");
+                        // alert("Vui long nhap day du thong tin");
                         Check = "1";
                         break;
                     }
@@ -264,17 +272,83 @@ window.onload = function () {
                 valUser = $(user).val();
             }
             if (Check === "0") {
-                $(privButton).show();
+                $(privButton).show("slow");
                 for (p of privButton) {
                     let link = $(p).attr("href");
                     // alert(link);
-                    $(link).show();
+                    $(link).show("slow");
                 }
-                $("header .info-user").show();
+                $("header .info-user").show("slow");
                 $(".name-user").text(`${valUser}`);
                 $("header .button").hide();
                 $(regForm).hide();
                 $(loginForm).hide();
+            }
+        });
+    }
+
+    /*==== Xử lý nút bar ===== */
+    let barBtn = document.querySelector("header .bar");
+    let navBar = document.querySelector("nav");
+    navBar.classList.add("hidden");
+    $(barBtn).click(function () {
+        if (navBar.classList.contains("hidden")) {
+            // navBar.style.display = "block";
+            $(navBar).show("slow");
+            navBar.classList.remove("hidden");
+        } else {
+            // navBar.style.display = "none";
+            $(navBar).hide("slow");
+            navBar.classList.add("hidden");
+        }
+    });
+
+    /*==== Xử lý nút xuất hiện thêm nhóm thảo luận ====*/
+    let contain = document.querySelectorAll(".discussion .container");
+    for (let i = 5; i < contain.length; i++) {
+        $(contain[i]).hide();
+    }
+
+    let watchMore = document.querySelector(".link-watch .link-cta");
+    $(watchMore).click(function () {
+        $(contain).show();
+        $(".discussion .link-watch").hide();
+    });
+
+    /*==== Xử lý tìm kiếm nhóm thảo luận ==== */
+    let searchGroup = document.querySelector("#searchGroup");
+
+    let text = document.querySelectorAll(".discussion .container h4");
+    searchGroup.onchange = function () {
+        $(contain).show();
+        let t = $(searchGroup).val(); //lấy giá trị của ô tìm kiếm
+        for (let d of text) {
+            if (d.innerText === t) {
+                let subj = $(d).attr("rel"); //lấy rel của title
+                let group = document.querySelector(`#${subj}`);
+                // $(contain).hide();
+                $(group).show();
+            } else {
+                let subj = $(d).attr("rel"); //lấy rel của title
+                let group = document.querySelector(`#${subj}`);
+                $(group).hide();
+            }
+        }
+        if (t === "") $(contain).show();
+    };
+
+    /*Xử lý nút Tham gia */
+    let joinBtn = document.querySelectorAll(".discussion .button .btn-cta");
+    for (let j of joinBtn) {
+        $(j).click(function () {
+            let vl = $(this).text();
+            if (vl === "Tham gia") {
+                this.classList.add("access");
+                j.innerText = "Truy cập";
+            } else {
+                let getId = $(this).attr("rel");
+                alert(getId);
+                // $(this).attr("href", "#libraryId");
             }
         });
     }
