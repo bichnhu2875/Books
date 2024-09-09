@@ -7,7 +7,7 @@ header .content {
 
 header .bar {
     display: flex;
-    width: 105px;
+    width: 50px;
 }
 
 header .content-inf {
@@ -98,6 +98,19 @@ nav {
 .news .detail .image {
     margin-top: 25px;
     width: 80%;
+}
+
+/* ==== discussion ==== */
+.discussion .containers {
+    width: 85%;
+}
+
+.discussion .content:not(:first-child) {
+    max-width: 95%;
+}
+
+.discussion .body-page {
+    width: 88%;
 }
 
 /* ==== footer ==== */

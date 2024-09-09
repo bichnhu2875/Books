@@ -80,6 +80,12 @@ window.onload = function () {
         n.classList.add("animate__fadeInUp");
     }
 
+    let discuss = document.querySelectorAll(".discussion .container");
+    for (let d of discuss) {
+        d.classList.add("wow");
+        d.classList.add("animate__fadeInUp");
+    }
+
     wow = new WOW({
         boxClass: "wow", // default
         animateClass: "animate__animated", // default
@@ -111,7 +117,7 @@ window.onload = function () {
         // xử lý các ô nhập liệu xuất hiện khi ấn vào
         $(textOption).hide(); //tất cả các ô nhập liệu đều ẩn
         let name = $(this).attr("href");
-        $(name).show("slow"); //chỉ hiện ô nhập liệu có id trùng với href của btn
+        $(name).show(); //chỉ hiện ô nhập liệu có id trùng với href của btn
 
         let string = name; //Cắt id
         let stringCut = string.substring(1);
@@ -198,9 +204,10 @@ window.onload = function () {
     /*=========== Xử lý item public và item private =========== */
     let privButton = document.querySelectorAll("#linkId .link");
 
-    $(privButton).hide();
+    // $(privButton).hide();
 
     for (p of privButton) {
+        p.parentElement.style.display = "none";
         let link = $(p).attr("href");
         // alert(link);
         $(link).hide();
@@ -272,8 +279,9 @@ window.onload = function () {
                 valUser = $(user).val();
             }
             if (Check === "0") {
-                $(privButton).show("slow");
+                // $(privButton).show("slow");
                 for (p of privButton) {
+                    p.parentElement.style.display = "block";
                     let link = $(p).attr("href");
                     // alert(link);
                     $(link).show("slow");
@@ -286,19 +294,26 @@ window.onload = function () {
             }
         });
     }
-
     /*==== Xử lý nút bar ===== */
     let barBtn = document.querySelector("header .bar");
     let navBar = document.querySelector("nav");
     navBar.classList.add("hidden");
     $(barBtn).click(function () {
+        event.preventDefault();
         if (navBar.classList.contains("hidden")) {
             // navBar.style.display = "block";
-            $(navBar).show("slow");
+            $(navBar).show();
             navBar.classList.remove("hidden");
+
+            $("html,body").animate(
+                {
+                    scrollTop: 0,
+                },
+                1500
+            );
         } else {
             // navBar.style.display = "none";
-            $(navBar).hide("slow");
+            $(navBar).hide();
             navBar.classList.add("hidden");
         }
     });
@@ -341,15 +356,230 @@ window.onload = function () {
     let joinBtn = document.querySelectorAll(".discussion .button .btn-cta");
     for (let j of joinBtn) {
         $(j).click(function () {
+            let nameGroup = $(this).attr("rel");
             let vl = $(this).text();
             if (vl === "Tham gia") {
+                $(j).attr("href", `#!`);
                 this.classList.add("access");
                 j.innerText = "Truy cập";
             } else {
+                $(j).attr("href", `#${nameGroup}`);
                 let getId = $(this).attr("rel");
-                alert(getId);
-                // $(this).attr("href", "#libraryId");
+                $(this).attr("href", `#${getId}`);
+                $(`#${nameGroup}`).show();
             }
         });
     }
+
+    /* Xử lý nút tham gia */
+
+    let joinInBtn = document.querySelectorAll(".container .btn-cta");
+    for (let j of joinInBtn) {
+        $(j).click(function () {
+            let nameGroup = $(this).attr("rel");
+            if (j.innerText === "Tham gia") {
+                let tagBtn = document.querySelector(`#${nameGroup} .btn-cta`);
+                tagBtn.innerText = "Tham gia nhóm";
+            } else if (j.innerText === "Truy cập") {
+                let tagBtn = document.querySelector(`#${nameGroup} .btn-cta`);
+                tagBtn.innerText = "Rời nhóm";
+                $(tagBtn).addClass("access");
+            }
+        });
+    }
+
+    /* Xử lý phần bình luận */
+
+    $(".body-page").on("click", ".post-article .icon", function () {
+        event.preventDefault();
+        let likeId = $(this).attr("href");
+        let a = document.querySelector(likeId);
+        if (a.classList.contains("fa-regular")) {
+            a.classList.remove("fa-regular");
+            a.classList.add("fa-solid");
+            let b = document.querySelector(`${likeId}Inf`);
+            let num = Number(b.innerText);
+            b.innerText = num + 1;
+
+            // b.innerText = "Đã thích";
+        } else if (a.classList.contains("fa-solid")) {
+            a.classList.remove("fa-solid");
+            a.classList.add("fa-regular");
+            let b = document.querySelector(`${likeId}Inf`);
+            let num = Number(b.innerText);
+            b.innerText = num - 1;
+        }
+    });
+
+    /* Thêm phần bình luận khi người dùng bình luận */
+
+    let numWrite;
+    let numLike;
+    $(".body-page").on("change", ".write", function () {
+        let vl = this.value;
+        if (vl !== "") {
+            let giaTri = $(this).attr("rel");
+            $(`.${giaTri}`).append(
+                `<li><div class="avatar-user"><i class="fa-solid fa-user"></i></div><div class="text"><p>${vl}</p></div></li>`
+            );
+        }
+    });
+
+    let stat = document.querySelectorAll(".write-status");
+    for (let s of stat) {
+        $(s).change(function () {
+            let str = document.querySelectorAll(".write");
+            let rel = $(s).attr("rel");
+            for (let s of str) {
+                let getVal = $(s).attr("rel");
+                let strCut = getVal.substring(5);
+                numWrite =
+                    Number(numWrite) > Number(strCut) ? numWrite : strCut;
+            }
+            let tag = document.querySelectorAll(".body-page .icon");
+            for (let t of tag) {
+                numLike = Number(numLike);
+                let str = $(t).attr("href");
+                let strCut = str.substring(5);
+                numLike = Number(numLike) > Number(strCut) ? numLike : strCut;
+            }
+            if (s.value !== "") {
+                $(`#group${rel} .special`).after(`<div class="post-article">
+                                        <div class="row">
+                                            <div class="avatar">
+                                                <i class="fa-solid fa-user avatar-user"></i>
+                                            </div>
+                                            <div class="name">
+                                                ${valUser}
+                                            </div>
+                                        </div>
+                                        <div class="row2-desc">
+                                            <p class="desc">
+                                                ${s.value}
+                                            </p>
+                                            <img
+                                                src="./assets/image/news-5.jpg"
+                                                alt=""
+                                                class="image-article"
+                                            />
+                                        </div>
+                                        <div class="row-3">
+                                            <a href="#like${
+                                                Number(numLike) + 1
+                                            }" class="icon"
+                                                ><i
+                                                    class="fa-regular fa-thumbs-up like-btn"
+                                                    id="like${
+                                                        Number(numLike) + 1
+                                                    }"
+                                                ></i>
+                                                <span
+                                                    class="icon-inf"
+                                                    id="like${
+                                                        Number(numLike) + 1
+                                                    }Inf"
+                                                    >0</span
+                                                >
+                                            </a>
+                                        </div>
+                                        <div class="status-input comment">
+                                            <ul class="comment-part write${
+                                                Number(numWrite) + 1
+                                            }" style="width:100%">
+                                            </ul>
+                                            <div class="comment-user">
+                                                <div class="avatar-user">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Viết câu trả lời..."
+                                                    class="write"
+                                                    rel="write${
+                                                        Number(numWrite) + 1
+                                                    }"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>`);
+            }
+        });
+    }
+
+    /*Xử lý nút tham gia nhóm ở bên trong group */
+
+    let btnJoin = document.querySelectorAll(".header-page .btn-cta");
+    for (let b of btnJoin) {
+        $(b).click(function () {
+            let nameGroup = $(b).attr("href");
+            event.preventDefault();
+            if (b.innerText === "Tham gia nhóm") {
+                let vl = $(b).attr("rel");
+                let btn = document.querySelector(`.container a[rel=${vl}`);
+                btn.innerText = "Truy cập";
+                $(btn).addClass("access");
+                b.innerText = "Rời nhóm";
+                $(b).addClass("access");
+            } else {
+                let vl = $(b).attr("rel");
+                let btn = document.querySelector(`.container a[rel=${vl}`);
+                btn.innerText = "Tham gia";
+                $(btn).removeClass("access");
+                b.innerText = "Tham gia nhóm";
+                $(b).removeClass("access");
+                $(nameGroup).hide();
+            }
+        });
+    }
+
+    /* Ấn public-item */
+    let sec = document.querySelectorAll(".private-items .link");
+    let allLink = document.querySelectorAll(".navigation .link");
+    let publicBtn = document.querySelectorAll(".public-items .link");
+    for (let p of publicBtn) {
+        $(p).click(function () {
+            for (let a of sec) {
+                let hrefLink = $(a).attr("href");
+                $(hrefLink).hide();
+            }
+            for (let s of publicBtn) {
+                let hrefLink = $(s).attr("href");
+                $(hrefLink).show();
+            }
+        });
+    }
+
+    /* Chỉ hiện section được ấn vào */
+
+    for (let s of sec) {
+        $(s).click(function () {
+            for (let s of publicBtn) {
+                let hrefLink = $(s).attr("href");
+                $(hrefLink).hide();
+            }
+            for (let a of allLink) {
+                let hrefLink = $(a).attr("href");
+                $(hrefLink).hide();
+            }
+            let getHref = $(s).attr("href");
+            $(getHref).show();
+        });
+    }
+
+    /* Khi click vào logo */
+    let logo = document.querySelectorAll(".logo");
+    $(logo).click(function () {
+        $("html,body").animate(
+            {
+                scrollTop: 0,
+            },
+            1500
+        );
+    });
+
+    /* Tải lại trang khi ấn nút thoát */
+
+    $(".exit-btn").click(function () {
+        location.reload();
+    });
 };

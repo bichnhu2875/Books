@@ -2,10 +2,32 @@
     max-width: calc(100% - 20px);
 }
 
-/* header */
-header .bar {
-    display: none;
+.big {
+    flex-direction: column;
 }
+
+.navigation {
+    height: auto;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+nav .items .subtitle {
+    font-size: 2.1rem;
+}
+
+nav .item .link {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 70px;
+}
+
+nav .item {
+    height: auto;
+}
+
+/* header */
 
 header .content-inf {
     width: 100%;
@@ -115,4 +137,26 @@ footer .inf-link:last-child {
 .news .detail .image {
     width: 100%;
     overflow: hidden;
+}
+
+/* discussion */
+.discussion .containers {
+    width: 98%;
+}
+
+.discussion .body-page {
+    flex-direction: column-reverse;
+}
+.discussion .body-page .article {
+    width: 100%;
+}
+
+.discussion .intro-content {
+    width: 100%;
+    position: relative;
+    top: 0;
+}
+
+.discussion .header-page .button {
+    min-width: 27%;
 }

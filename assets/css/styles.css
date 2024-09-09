@@ -52,6 +52,7 @@ header .bar {
 header .bar i {
     font-size: 3.6rem;
     margin-left: 3px;
+    color: rgb(82, 82, 82);
 }
 
 header .content {
@@ -119,7 +120,7 @@ header .info-user {
     /* width: 12%; */
 }
 
-header .avatar-user {
+.avatar-user {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +134,7 @@ header .avatar-user {
     text-align: center;
 }
 
-header .avatar-user i {
+.avatar-user i {
     font-size: 2rem;
     color: #58554e;
 }
@@ -146,13 +147,29 @@ header p.name-user {
     letter-spacing: 0.8px;
 }
 
+header .exit-btn {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 24px;
+    margin-top: 5px;
+}
+
+header .exit-btn i {
+    padding: 4px 4px;
+    background: whitesmoke;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 /* ================ Top button =============== */
 .top {
     position: fixed;
     bottom: 10%;
     right: 1%;
     z-index: 999;
-    /* opacity: 0.6; */
+    opacity: 0.7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +192,6 @@ header p.name-user {
 
 .section-content {
     flex: 15;
-    width: 93%;
 }
 
 nav {
@@ -840,7 +856,7 @@ section.login .title {
     border-radius: 999px;
 }
 
-.library .like-btn {
+.like-btn {
     color: #5f5b53;
     margin-right: 4px;
     font-size: 1.9rem;
@@ -1128,7 +1144,7 @@ section.login .title {
 
 /* =========== discussion ============== */
 .discussion {
-    padding: 200px 0;
+    padding: 100px 0;
     background: #fffcf4;
 }
 
@@ -1257,6 +1273,7 @@ section.login .title {
     border-radius: 3px;
     background: #ebf5ff;
     color: #0064d1;
+    cursor: pointer;
 }
 
 .discussion .link-watch {
@@ -1278,6 +1295,242 @@ section.login .title {
 .access {
     background: #e4e6eb !important;
     color: #050505 !important;
+}
+
+.discussion .header-page .avatar {
+    text-align: center;
+    border-radius: 20px;
+}
+
+.discussion .header-page {
+    background: #fff;
+    padding-bottom: 29px;
+    border-bottom: 1px solid lightgray;
+    border-radius: 7px;
+}
+
+.discussion .header-page img {
+    width: 86%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.discussion .header-page .row {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discussion .header-page .row .title {
+    color: #050505;
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+.discussion .header-page .row .inf {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.discussion .header-page .stat {
+    display: flex;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.discussion .header-page .stat i {
+    transform: translateY(14%);
+    margin-right: 3px;
+}
+
+.discussion .header-page .stat-number {
+    font-size: 1.6rem;
+}
+
+.discussion .header-page .button {
+    min-width: 20%;
+}
+
+.discussion .body-page {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.discussion .body-page .article {
+    width: 60%;
+}
+
+.discussion .body-page .status-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    background: #fff;
+    padding: 20px 10px;
+    border-radius: 9px;
+    box-shadow: 1px 6px 20px -5px rgba(3, 2, 2, 0.2);
+}
+
+.discussion .body-page .comment-user,
+.discussion .body-page .comment-part li {
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.discussion .body-page .comment-part li {
+    background: #f0f2f5;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.discussion .comment-part .text {
+    width: 80%;
+    color: #65676b;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+.discussion .comment-part .avatar-user {
+    margin-right: 20px !important;
+}
+
+.discussion .comment-part .avatar-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.discussion .status-input:first-child {
+    flex-direction: row;
+}
+
+.discussion .body-page .status-input .avatar-user {
+    margin: 0 10px 0 0;
+}
+
+.discussion .body-page .write,
+.write-status {
+    width: 80%;
+    height: 50px;
+    padding: 0 0 0 20px;
+    color: #65676b;
+    font-size: 1.6rem;
+    background: #f0f2f5;
+    border-radius: 999px;
+    border: none;
+}
+
+.discussion .post-article {
+    margin-top: 50px;
+    background: #fff;
+    border-radius: 9px;
+    box-shadow: 1px 6px 20px -5px rgba(3, 2, 2, 0.2);
+}
+
+.discussion .post-article .row {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 0 10px;
+}
+
+.discussion .post-article .avatar {
+    margin-right: 10px;
+}
+
+.discussion .body-page .post-article .ava-user {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.discussion .post-article .name {
+    color: #050505;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.discussion .post-article .desc {
+    color: #65676b;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 20px 10px;
+}
+
+.discussion .post-article .image-article {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    height: 250px;
+    object-fit: cover;
+}
+
+.discussion .row-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 10px 13px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.discussion .icon {
+    color: #58554e;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: rgba(224, 218, 210, 0.75);
+    padding: 10px 12px;
+    border-radius: 999px;
+}
+
+.discussion .body-page .status-input:not(:first-child) {
+    box-shadow: initial;
+    margin-top: initial;
+}
+
+.discussion .intro-content {
+    position: sticky;
+    top: 92px;
+    padding: 25px 20px;
+    background: #fff;
+    width: 35%;
+    height: 100%;
+    margin-top: 30px;
+    box-shadow: 1px 6px 20px -5px rgba(3, 2, 2, 0.2);
+    border-radius: 12px;
+}
+
+.discussion .intro-content .title {
+    color: #050505;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.discussion .intro-content .desc {
+    color: #050505;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+.discussion .public,
+.discussion .visibly {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 20px;
 }
 
 /* ============= footer ============= */
