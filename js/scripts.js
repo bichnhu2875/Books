@@ -289,11 +289,22 @@ window.onload = function () {
                 $("header .info-user").show("slow");
                 $(".name-user").text(`${valUser}`);
                 $("header .button").hide();
+                // Nút thông báo
+                $("#notiId").show();
+                $(".noti .sub").text(`Xin chào ${valUser}`);
+                setTimeout(function () {
+                    $("#notiId").hide();
+                }, 3000);
                 $(regForm).hide();
                 $(loginForm).hide();
             }
         });
     }
+    /*==== Nút close ====*/
+    $("#close").click(function () {
+        $("#notiId").hide();
+    });
+
     /*==== Xử lý nút bar ===== */
     let barBtn = document.querySelector("header .bar");
     let navBar = document.querySelector("nav");
@@ -362,6 +373,11 @@ window.onload = function () {
                 $(j).attr("href", `#!`);
                 this.classList.add("access");
                 j.innerText = "Truy cập";
+                $("#notiId").show();
+                $(".noti .sub").text(`Tham gia nhóm thành công`);
+                setTimeout(function () {
+                    $("#notiId").hide();
+                }, 3000);
             } else {
                 $(j).attr("href", `#${nameGroup}`);
                 let getId = $(this).attr("rel");
@@ -380,6 +396,11 @@ window.onload = function () {
             if (j.innerText === "Tham gia") {
                 let tagBtn = document.querySelector(`#${nameGroup} .btn-cta`);
                 tagBtn.innerText = "Tham gia nhóm";
+                $("#notiId").show();
+                $(".noti .sub").text(`Tham gia nhóm thành công`);
+                setTimeout(function () {
+                    $("#notiId").hide();
+                }, 3000);
             } else if (j.innerText === "Truy cập") {
                 let tagBtn = document.querySelector(`#${nameGroup} .btn-cta`);
                 tagBtn.innerText = "Rời nhóm";
