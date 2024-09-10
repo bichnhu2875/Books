@@ -97,7 +97,7 @@ window.onload = function () {
 
     /* ====== Chức năng tìm kiếm của thư viện ===== */
 
-    $(".library .content > .desc").hide(); //Ẩn chữ không tìm thấy
+    $(".library .content > .desc").hide(); //Ẩn chữ "không tìm thấy"
 
     let textOption = document.querySelectorAll(
         ".library .text-options .text-option"
@@ -214,11 +214,15 @@ window.onload = function () {
     }
 
     /*============== Xử lý ô đăng nhập đăng ký ============= */
+
     let regForm = document.getElementById("regId");
 
     let loginForm = document.getElementById("loginId");
 
+    //Ẩn ô đăng nhập, chỉ hiện sẵn ô đăng kí
     $(loginForm).hide();
+
+    //Khi click vào đăng nhập thì ẩn form đăng ký
     let regBtn = document.querySelectorAll(".regbtn");
     $(regBtn).click(function () {
         $(regForm).hide();
@@ -236,6 +240,7 @@ window.onload = function () {
 
     /*=============Xử lý dữ liệu nhập vào đăng nhập, đăng ký  ============ */
 
+    //Ẩn thông tin người dùng
     $(".info-user").hide();
     let submit = document.querySelectorAll("input[type=submit]");
     let Check = "0";
@@ -246,6 +251,7 @@ window.onload = function () {
         $(s).click(function () {
             Check = "0";
             let typeBtn = $(s).attr("value");
+            //Kiểm tra nút nộp mà người dùng nhập là login hay register
             if (typeBtn === "Đăng ký") {
                 let emailCheck = document.querySelector("input[type=email]");
                 let val = $(emailCheck).val();
@@ -279,33 +285,35 @@ window.onload = function () {
                 valUser = $(user).val();
             }
             if (Check === "0") {
-                // $(privButton).show("slow");
+                //Khi hợp lệ, hiện các nút private trong nav
                 for (p of privButton) {
                     p.parentElement.style.display = "block";
                     let link = $(p).attr("href");
                     // alert(link);
                     $(link).show("slow");
                 }
+                //hiện thông tin người dùng
                 $("header .info-user").show("slow");
                 $(".name-user").text(`${valUser}`);
                 $("header .button").hide();
-                // Nút thông báo
+                // Đưa ra thông báo
                 $("#notiId").show();
                 $(".noti .sub").text(`Xin chào ${valUser}`);
                 setTimeout(function () {
                     $("#notiId").hide();
                 }, 3000);
+                //Ân form đăng nhập, đăng kí
                 $(regForm).hide();
                 $(loginForm).hide();
             }
         });
     }
-    /*==== Nút close ====*/
+    /*============  Nút close ============ */
     $("#close").click(function () {
         $("#notiId").hide();
     });
 
-    /*==== Xử lý nút bar ===== */
+    /*============  Xử lý nút bar ============  */
     let barBtn = document.querySelector("header .bar");
     let navBar = document.querySelector("nav");
     navBar.classList.add("hidden");
@@ -329,9 +337,10 @@ window.onload = function () {
         }
     });
 
-    /*==== Xử lý nút xuất hiện thêm nhóm thảo luận ====*/
+    /*============ Xử lý nút xuất hiện thêm nhóm thảo luận ============*/
     let contain = document.querySelectorAll(".discussion .container");
     for (let i = 5; i < contain.length; i++) {
+        //Ẩn từ các nhóm thứ 5 đổ xuống
         $(contain[i]).hide();
     }
 
@@ -341,12 +350,12 @@ window.onload = function () {
         $(".discussion .link-watch").hide();
     });
 
-    /*==== Xử lý tìm kiếm nhóm thảo luận ==== */
+    /*============ Xử lý tìm kiếm nhóm thảo luận ============ */
     let searchGroup = document.querySelector("#searchGroup");
 
     let text = document.querySelectorAll(".discussion .container h4");
     searchGroup.onchange = function () {
-        $(contain).show();
+        // $(contain).show();
         let t = $(searchGroup).val(); //lấy giá trị của ô tìm kiếm
         for (let d of text) {
             if (d.innerText === t) {
@@ -360,10 +369,11 @@ window.onload = function () {
                 $(group).hide();
             }
         }
+        //Khi mà không nhập gì cả, phải show hết
         if (t === "") $(contain).show();
     };
 
-    /*Xử lý nút Tham gia */
+    /*============Xử lý nút Tham gia ============*/
     let joinBtn = document.querySelectorAll(".discussion .button .btn-cta");
     for (let j of joinBtn) {
         $(j).click(function () {
@@ -387,7 +397,7 @@ window.onload = function () {
         });
     }
 
-    /* Xử lý nút tham gia */
+    /*============ Xử lý nút tham gia bên trong nhóm ============*/
 
     let joinInBtn = document.querySelectorAll(".container .btn-cta");
     for (let j of joinInBtn) {
@@ -409,7 +419,7 @@ window.onload = function () {
         });
     }
 
-    /* Xử lý phần bình luận */
+    /*============ Xử lý phần nút like bình luận ============*/
 
     $(".body-page").on("click", ".post-article .icon", function () {
         event.preventDefault();
@@ -432,7 +442,7 @@ window.onload = function () {
         }
     });
 
-    /* Thêm phần bình luận khi người dùng bình luận */
+    /*============ Thêm phần bình luận khi người dùng bình luận ============*/
 
     let numWrite;
     let numLike;
@@ -445,7 +455,7 @@ window.onload = function () {
             );
         }
     });
-
+    /*============ Thêm Bài viết ============*/
     let stat = document.querySelectorAll(".write-status");
     for (let s of stat) {
         $(s).change(function () {
@@ -527,7 +537,7 @@ window.onload = function () {
         });
     }
 
-    /*Xử lý nút tham gia nhóm ở bên trong group */
+    /*============ Xử lý nút tham gia nhóm ở bên trong group có thể giống với bên ngoài============*/
 
     let btnJoin = document.querySelectorAll(".header-page .btn-cta");
     for (let b of btnJoin) {
@@ -553,7 +563,7 @@ window.onload = function () {
         });
     }
 
-    /* Ấn public-item */
+    /*============ Ấn public-item ============*/
     let sec = document.querySelectorAll(".private-items .link");
     let allLink = document.querySelectorAll(".navigation .link");
     let publicBtn = document.querySelectorAll(".public-items .link");
@@ -570,7 +580,7 @@ window.onload = function () {
         });
     }
 
-    /* Chỉ hiện section được ấn vào */
+    /*============ Chỉ hiện section được ấn vào ============*/
 
     for (let s of sec) {
         $(s).click(function () {
@@ -587,7 +597,7 @@ window.onload = function () {
         });
     }
 
-    /* Khi click vào logo */
+    /*============ Khi click vào logo ============*/
     let logo = document.querySelectorAll(".logo");
     $(logo).click(function () {
         $("html,body").animate(
@@ -598,7 +608,7 @@ window.onload = function () {
         );
     });
 
-    /* Tải lại trang khi ấn nút thoát */
+    /*============ Tải lại trang khi ấn nút thoát ============*/
 
     $(".exit-btn").click(function () {
         location.reload();
